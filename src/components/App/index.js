@@ -5,11 +5,12 @@ import Router from '../../routes';
  const App = () => {
    
     return (
-        <Router>{
-            (content, routeProps) => {
-                return (<Template {...routeProps}>{content}</Template>)
+        <Router>
+            {
+                (content, routeProps) => {
+                    return (<Template {...routeProps}>{content}</Template>)
+                }
             }
-        }
         </Router>
     );
 }

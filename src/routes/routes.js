@@ -1,5 +1,11 @@
 
-import { Home } from '../components';
+import { 
+        Home,
+        Mision,
+        Donate,
+        Staff,
+        Contact
+       } from '../components';
 
   export default () => [
     {
@@ -7,5 +13,25 @@ import { Home } from '../components';
       exact: true,
       component: Home
     },
+    {
+      path:'/mision',
+      component:Mision
+    },
+    {
+      path:'/donate',
+      component:Donate
+    },
+    {
+      path:'/staff',
+      component:Staff
+    },
+    {
+      path:'/contact',
+      component:Contact
+    },
+    {
+      path:'/contact',
+      component: Contact
+    }
     
   ]

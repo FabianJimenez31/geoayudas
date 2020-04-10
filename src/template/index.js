@@ -21,7 +21,7 @@ class Template extends Component {
             {this.props.children}
           </div>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center' }}>GeoAyuda ©2018 Created by GeoAyuda</Footer>
       </Layout>
     );
   }
