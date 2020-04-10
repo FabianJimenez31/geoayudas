@@ -1,0 +1,97 @@
+.home{
+    min-height: 90vh;
+    background-color: @ga-purple-t;
+    color:@ga-white;
+}
+.home-title{
+    font-size: 34px;
+    color:@ga-white;
+}
+
+.ant-col{
+    &.carousel-text1{
+        color: @ga-white-t1;
+        font-size: 12px;
+        font-family: 'CusFont2';
+        text-transform: uppercase;
+    }
+    &.carousel-text2{
+        margin: 10px;
+        color: @ga-white;
+        font-family: 'CusFont2';
+        text-transform: uppercase;
+        border-bottom: 3px solid @ga-lightpurple;
+    }
+    &.carousel-text3{
+        color: @ga-white-t1;
+        font-size: 14px;
+        font-family: 'CusFont2';
+    }
+}
+
+.ant-btn{
+    &.custom1{
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        padding: 5px;
+        background-color: @ga-blue;
+        border-color: @ga-blue;
+        border-radius: 10px;
+        color:@ga-white;
+        text-transform: uppercase;
+        font-family: 'CusFont1';
+        font-size: 20px;
+        box-shadow: -5px 10px 0px @ga-lightpurple;
+        &.carousel{
+            margin:10px;
+        }
+    }
+    &.custom1:hover{
+        color:@ga-lightpurple;
+        border-color: @ga-blue;
+        background-color: @ga-blue;
+        box-shadow: -2px 2px 0px @ga-lightpurple;
+    }
+} 
+
+.ant-carousel{
+   line-height: 2500;
+}
+
+.home-carousel.slick-slider{
+    &>ul{
+        justify-content: left;
+        left: 20px;
+        bottom: -50px;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+}
+
+.ant-card.form{
+    border-radius: 20px;
+    &>.ant-card-body>h2{
+        color:  @ga-blue;
+        font-family:'CusFont2';
+        text-align: center;
+    }
+}
+
+.ant-form-item.form-q{
+    &>.ant-col{
+        &>label{
+            color: @ga-blue;
+            font-family:'CusFont2';
+            font-size: 14px;
+        }
+    }
+}
+
+@media(max-width:700px) {
+    .ant-btn{
+        &.custom1{
+            max-width:95%;
+        }
+    } 
+}

@@ -24,10 +24,10 @@ function MainLogo (){
 export const HeaderComponent = () =>(    
     <Header className={`header`}>
       <Row justify='start' align="middle">
-        <Col xs={24} md={6}>
+        <Col xs={24} lg={6} >
           < MainLogo />
         </Col>
-        <Col xs={24} md={18}>
+        <Col xs={24} lg={18} >
           <Menu mode="horizontal" className={`header-menu`} defaultSelectedKeys={['home']}>
             <Menu.Item key="home"><Link to={`/`}>INICIO</Link></Menu.Item>
             <Menu.Item key="mision"><Link to={`/mision`}>NUESTRA MOTIVACION</Link></Menu.Item>
