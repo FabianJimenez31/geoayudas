@@ -27,6 +27,17 @@
         font-size: 14px;
         font-family: 'CusFont2';
     }
+    &>p.help{
+        font-family: 'CusFont2';
+        margin: 10px;
+        font-size: 16px;
+        text-align: center;
+        color: @ga-white;
+        &>a{
+            color: @ga-lightpurple;
+            text-decoration: underline;
+        }
+    }
 }
 
 .ant-btn{
@@ -43,9 +54,13 @@
         font-family: 'CusFont1';
         font-size: 20px;
         box-shadow: -5px 10px 0px @ga-lightpurple;
+        position: relative;
         &.carousel{
             margin:10px;
         }
+    }
+    &.custom1.wide{
+        max-width: 100%;
     }
     &.custom1:hover{
         color:@ga-lightpurple;
@@ -55,12 +70,19 @@
     }
 } 
 
+.button-icon{
+    position: absolute;
+    right: -12px;
+    bottom: -10px;
+}
+
 .ant-carousel{
    line-height: 2500;
 }
 
 .home-carousel.slick-slider{
     &>ul{
+        display: none!important;
         justify-content: left;
         left: 20px;
         bottom: -50px;
@@ -88,10 +110,108 @@
     }
 }
 
+.carousel-controller{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 40px 0;
+
+    &>button{
+        background-color: @ga-transparent ;
+        border-color: @ga-white-t1;
+        color: @ga-white;
+        margin: 7px;
+        &:hover{
+        background-color: @ga-blue ;
+        border-color: @ga-blue;
+        color: @ga-white;
+        }
+    }
+
+    &>span{
+        margin: 15px;
+        display: inline-flex;
+        font-size: 10px;
+        font-family:'CusFont2';
+    }
+
+    &>.cus-controlller{
+        display: inline-flex;
+        justify-content: center;
+        list-style: none;
+        width: 150px;
+        padding: 0;
+        &>li{
+            &>button{
+                margin: 5px;
+                border-width: 2px;
+                border-color: @ga-white-t1;
+                border-radius: 10px;
+                width: 10px;
+                height: 3px;
+                background-color:@ga-white-t1;
+            }
+            &>button:hover,
+            &>button.selected{
+                width: 30px;
+                background-color:@ga-white;
+                border-color: @ga-white;
+            }
+        }
+    }
+}
+.ant-select.form1{
+
+    &>.ant-select-selector{
+        &:hover{
+
+            border-color: @ga-lightpurple!important;
+        }
+        &::selection{
+            border-color: @ga-lightpurple!important;
+        }
+    }
+}
+
+.background-carousel{
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .slick-slider{
+        &>ul{
+            display: none!important;
+        }
+        }
+}
+.background-images{
+    width: 100%;
+    object-fit: cover;
+}
+
+
 @media(max-width:700px) {
+    .ant-row.home{
+        &>.ant-col{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
     .ant-btn{
         &.custom1{
             max-width:95%;
         }
     } 
+}
+
+@media(max-width:1000px){
+    .carousel-controller{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
 }
