@@ -19,7 +19,7 @@
 .env.production.local
 
 #images
-.png
+*.png
 
 npm-debug.log*
 yarn-debug.log*
