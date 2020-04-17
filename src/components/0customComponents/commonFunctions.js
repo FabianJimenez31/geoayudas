@@ -38,7 +38,6 @@ export const ServerData=async (path)=>{
         if (response.status !== 200) {
             throw new Error('bad request');
         }
-        console.log(response);
         response = await response.json();
         return response;
     }
@@ -51,7 +50,7 @@ export const ServerData=async (path)=>{
 // set how many slides can be display in the carousel based in screen size 
 export const SlidesToShow = (numberofslides) =>{
     const width = document.body.clientWidth;
-    const slides = numberofslides ? numberofslides.length : 1;
+    const slides = numberofslides && numberofslides.length > 0 ? numberofslides.length : 1;
     if(width > 1800){
         if(slides >= 4){
             return 4;
