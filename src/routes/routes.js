@@ -6,7 +6,7 @@ import {
   export default () => [
     {
       path: '/',
-      exact: true,
+      exact: false,
       component: Home
     }
   ]

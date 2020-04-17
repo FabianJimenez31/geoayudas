@@ -1,6 +1,6 @@
-import React, { useRef, useState, Fragment } from 'react';
+import React, { useRef, useState, useEffect} from 'react';
 // Components Ant
-import {  Card, Carousel,Tabs, Layout, Row, Col, Button, Steps } from 'antd';
+import {  Card, Carousel,Tabs, Layout, Row, Col, Button} from 'antd';
 // Components
 import DefButton from '../Micro/defaultButton';
 // Icons 
@@ -25,34 +25,57 @@ const CMk4Down = (refe,item,waitTime,setCarouselMk4,carouselMk4) => {
     setTimeout(()=>{refe.current.slick.slickPlay();},waitTime);
     refe.current.slick.slickNext();
 }
-const CMk4Goto = (refe,item,waitTime,setCarouselMk4) => {
-    setCarouselMk4(item);
-    refe.current.slick.slickPause();
-    setTimeout(()=>{refe.current.slick.slickPlay();},waitTime);
-    refe.current.slick.slickGoTo(item);
-}
+// const CMk4Goto = (refe,item,waitTime,setCarouselMk4) => {
+//     setCarouselMk4(item);
+//     refe.current.slick.slickPause();
+//     setTimeout(()=>{refe.current.slick.slickPlay();},waitTime);
+//     refe.current.slick.slickGoTo(item);
+// }
+
 
 
 const ContentCarousel = ({
     id,
     name,
-    departamento,
     departamentos,
     waitTime,
     tabs,
     tabs2,
     setCurrentCity,
     setDepartamento,
-    currentcity,
     initiatives,
     setInitiative,
+    mainCity,
+    mainDepartamento,
+    resetMainDepartamento,
+    resetMainCity
 }) => {
     let carouselWide = useRef(0);
     //state
     const [carouselMk4,setCarouselMk4] = useState(0);
+    const [tab,setTab] = useState(null);
+    const [tab2,setTab2] = useState(null);
     let initiatives_array = null;
 
     // TODO => filtrar si es emprendimiento o causa
+    useEffect(()=>{
+        if(mainDepartamento){
+            setTab(mainDepartamento);
+            setDepartamento(mainDepartamento);
+            setTab2(null);
+            resetMainDepartamento();
+        }else if(tabs && !mainDepartamento && !tab){
+            setTab(tabs[0].id);
+        }
+        if(mainCity){
+            setTab2(mainCity);
+        }else if(tabs2 && !mainCity && !tab2){
+            setTab2(tabs2[0].id);
+        }
+        // eslint-disable-next-line
+    },[mainDepartamento,mainCity,tabs,tabs2]);
+
+
     // Dividing array to create cards groups
     let main = null;
     if(initiatives){main = Math.ceil(initiatives.length/SlidesToShow(initiatives))}
@@ -91,24 +114,27 @@ const ContentCarousel = ({
                         {
                         departamentos &&
                         <Tabs 
-                        defaultActiveKey={tabs && tabs[0].id} 
+                        activeKey = {`${tab}`} 
                         className="custom-tab" 
                         onChange={(el)=>{
+                            if(mainDepartamento){resetMainDepartamento()}
+                            setTab(el);
+                            setTab2(null);
                             setDepartamento(el);
                             setCarouselMk4(0);
-                            
                             }}>
                             {tabs && tabs.map((el,i)=>{
                                 return (
                                 <TabPane tab={el.nombre} key={`${el.id}`} className={`custom-tabpane`}>
                                     {
                                         tabs2 ? <Tabs 
-                                        defaultActiveKey={tabs2 && tabs2[0].id}
+                                        activeKey={`${tab2}`}
                                         className="custom-tab" 
                                         onChange={(el)=>{
+                                            if(mainCity){resetMainCity()}
+                                            setTab2(el);
                                             setCurrentCity(el);
                                             setCarouselMk4(0);
-                                            
                                             }}>
                                         {
                                             tabs2.map((el2,i2)=>{
@@ -147,7 +173,7 @@ const ContentCarousel = ({
                                             {el.map((el2,i2)=>{
                                                 return (
                                                 <Card key={`${id}_card_carousel_${i2}`} className='init_card'>
-                                                <img className='card_initiative_img' alt={`img_holder_${i}`} src='https://phassociation.org/wp-content/uploads/2017/04/iStock_000079377379_Medium.jpg'/>
+                                                <img className='card_initiative_img' alt={`img_holder_${i}`} src={`./assets/jpg/Thumbnail_${Math.floor(Math.random() * (6 - 1 + 1) + 1)}.png`}/>
                                                 <p className='card_title'>{el2.direccion}</p>
                                                 <p className='card_desc'>{el2.url}</p>
                                                 <DefButton title={`Contactar`} classes={`wide`} action={()=>setInitiative(el2.id)}/>

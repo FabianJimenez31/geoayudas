@@ -7,7 +7,7 @@
         "buttonlabel":"conocer mas",
         "buttonicon":"/assets/clicklogo.png",
         "buttonlink":"/",
-        "image":"assets/backgrounds/poor-2544061_1280.jpg",
+        "image":"assets/jpg/Layer_1579_1.png",
         "imagealt":"kids"
     },
     {
@@ -18,7 +18,7 @@
         "buttonlabel":"apoyar",
         "buttonicon":"/assets/clicklogo.png",
         "buttonlink":"/",
-        "image":"assets/backgrounds/workplace-1245776_1280.jpg",
+        "image":"assets/jpg/Layer_1579.png",
         "imagealt":"meeting"
     },
     {
@@ -29,7 +29,7 @@
         "buttonlabel":"conocer mas",
         "buttonicon":"/assets/clicklogo.png",
         "buttonlink":"/",
-        "image":"assets/backgrounds/treatment-1327811_1280.jpg",
+        "image":"assets/jpg/Layer_1579_2.png",
         "imagealt":"hands"
     }
 ]

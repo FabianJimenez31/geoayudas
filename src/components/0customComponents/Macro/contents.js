@@ -83,7 +83,6 @@ class Contents extends React.Component{
         // Variables and Refs
         const {
                 departamentos,
-                departamento,
                 cities,
                 city,
                 initiatives,
@@ -93,6 +92,8 @@ class Contents extends React.Component{
                 id,
                 name,
                 waitTime,
+                resetMainDepartamento,
+                reseMainCity
                 } = this.props;
         const {
                 setInitiative,
@@ -115,7 +116,7 @@ class Contents extends React.Component{
             <ContentCarousel
             id={id}
             name={name}
-            departamento={departamento}
+            // departamento={departamento}
             departamentos={departamentos}
             waitTime={waitTime}
             tabs={departamentos}
@@ -125,6 +126,10 @@ class Contents extends React.Component{
             currentcity={city}
             initiatives={initiatives}
             setInitiative={setInitiative}
+            mainDepartamento={this.props.departamento}
+            mainCity = {this.props.city}
+            reseMainCity={reseMainCity}
+            resetMainDepartamento={resetMainDepartamento}
             />
         </div>);
     }

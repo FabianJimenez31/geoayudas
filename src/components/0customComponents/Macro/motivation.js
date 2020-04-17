@@ -3,8 +3,15 @@ import React from 'react';
 
 
 class Motivation extends React.Component{
+    constructor(props){
+        super(props);
+        this.props = props;
+    }
+    
     render(){
-        return<div id='motivation'>Motivation</div>;
+        return<div id={`${this.props.id}`}>
+            Motivation
+            </div>;
     }
 }
 

@@ -4,6 +4,8 @@ import { Col, Card, Form, Select } from 'antd';
 // Component 
 import DefButton from '../Micro/defaultButton';
 const { Option } = Select;
+// Routes
+const routes = require('../sharedContents/id_routes.json');
 
 const  Form1 = ({departamentos, ciudades, setDepartamento, setCity})=>{
     return <Fragment>
@@ -36,7 +38,9 @@ const  Form1 = ({departamentos, ciudades, setDepartamento, setCity})=>{
                                 </Select>
                             </Form.Item>
                             <Form.Item >
-                            <DefButton title={`donar`} classes={`wide`}/>
+                            <a href={`#${routes[3].name}`}>
+                            <DefButton title={`donar`} classes={`wide`} />
+                            </a>
                             </Form.Item>
                         </Form>
                     </Col>

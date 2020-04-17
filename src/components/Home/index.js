@@ -10,15 +10,8 @@ import Staff from '../0customComponents/Macro/staff';
 // Functions 
 import { ResizeBackGroundImages} from '../0customComponents/commonFunctions';
 
-
-// Icons 
-// import {LeftOutlined, RightOutlined} from '@ant-design/icons';
-
-// const {TabPane} = Tabs;
-// const {Header, Footer,Content} = Layout;
-// 
-
-// const { Option } = Select;
+// Routes 
+const routes = require('../0customComponents/sharedContents/id_routes.json');
 
 class  Home extends React.Component {
 
@@ -34,12 +27,17 @@ class  Home extends React.Component {
 
      setDepartamento = (params) => {
         this.setState(()=>({
-            ciudades: null,
             departamento:params
         }))
     }
      setCity = (params) =>{
         this.setState(()=>({city:params}))
+    }
+    resetMainCity = () =>{
+        this.setState(()=>({city:null}))
+    }
+    resetMainDepartamento = () =>{
+        this.setState(()=>({departamento:null,city:null}))
     }
     
      componentDidMount (){
@@ -49,7 +47,9 @@ class  Home extends React.Component {
         window.addEventListener('orientationchange',function(){ResizeBackGroundImages();});
     }
 
-    
+    // componentDidUpdate(){
+    //     console.log(this.state);
+    // }
 
 
     render (){
@@ -61,7 +61,9 @@ class  Home extends React.Component {
         const waitTime = 2000;
         const {
                 setCity,
-                setDepartamento
+                setDepartamento,
+                resetMainDepartamento,
+                resetMainCity
                 }= this;
         
        
@@ -69,27 +71,38 @@ class  Home extends React.Component {
         return (
             <Fragment>
                 <Initial 
+                    id={`${routes[0].name}`}
                     waitTime={waitTime}
                     setDepartamento={setDepartamento}
                     setCity={setCity}
                     />
-                <Motivation />
-                <MapView />
+                <Motivation 
+                    id={`${routes[1].name}`}
+                    />
+                <MapView 
+                    id={`${routes[2].name}`}
+                />
                 <Contents 
-                    id='donacion'
+                    id={`${routes[3].name}`}
                     departamento={departamento}
                     city={city}
+                    resetMainDepartamento={resetMainDepartamento}
+                    resetMainCity={resetMainCity}
                     waitTime={waitTime}
                     name={`CAUSAS PARA DONAR`}
                     />
                 <Contents 
-                    id='emprendimiento'
+                    id={`${routes[4].name}`}
                     departamento={null}
                     city={null}
+                    resetMainDepartamento={resetMainDepartamento}
+                    resetMainCity={resetMainCity}
                     waitTime={waitTime}
                     name={`INICIATIVAS Y \n EMPRENDIMIENTOS`}
                      />
-                <Staff />
+                <Staff
+                    id={`${routes[5].name}`}
+                />
             </Fragment>
         );
     }
