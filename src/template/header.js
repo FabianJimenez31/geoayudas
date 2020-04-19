@@ -30,11 +30,11 @@ export const HeaderComponent = () =>(
         </Col>
         <Col xs={24} lg={18} >
           <Menu mode="horizontal" className={`header-menu`} defaultSelectedKeys={['home']}>
-            <Menu.Item key="home"><a href={`#${routes[0].name}`}>INICIO</a></Menu.Item>
-            <Menu.Item key="mision"><a href={`#${routes[1].name}`}>NUESTRA MOTIVACION</a></Menu.Item>
-            <Menu.Item key="donate"><a href={`#${routes[3].name}`}>DONDE PUEDO DONAR</a></Menu.Item>
-            <Menu.Item key="staff"><a href={`#${routes[5].name}`}>NUESTRO EQUIPO</a></Menu.Item>
-            <Menu.Item key="contact"><a href={`#`}>CONTACTANOS</a></Menu.Item>
+            <Menu.Item key="home"><a href={`#/${routes[0].name}`}>INICIO</a></Menu.Item>
+            <Menu.Item key="mision"><a href={`/#${routes[1].name}`}>NUESTRA MOTIVACION</a></Menu.Item>
+            <Menu.Item key="donate"><a href={`/#${routes[3].name}`}>DONDE PUEDO DONAR</a></Menu.Item>
+            <Menu.Item key="staff"><a href={`/#${routes[5].name}`}>NUESTRO EQUIPO</a></Menu.Item>
+            <Menu.Item key="contact"><a href={`/#`}>CONTACTANOS</a></Menu.Item>
           </Menu>
         </Col>
       </Row>

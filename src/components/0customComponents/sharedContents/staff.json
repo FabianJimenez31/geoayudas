@@ -1,0 +1,26 @@
+[
+    {
+        "nombre":"nicolas garcia",
+        "id":"01",
+        "cargo":"product manager",
+        "descripcion":"Diseñador con 3 años de experiencia creando productos digitales para agencias y startups",
+        "link":"/",
+        "imagen":"assets/jpg/Mask_1.png"
+    },
+    {
+        "nombre":"nicolas garcia",
+        "id":"02",
+        "cargo":"product manager",
+        "descripcion":"Diseñador con 3 años de experiencia creando productos digitales para agencias y startups",
+        "link":"/",
+        "imagen":"assets/jpg/Mask_1.png"
+    },
+    {
+        "nombre":"nicolas garcia",
+        "id":"03",
+        "cargo":"product manager",
+        "descripcion":"Diseñador con 3 años de experiencia creando productos digitales para agencias y startups",
+        "link":"/",
+        "imagen":"assets/jpg/Mask_1.png"
+    }
+]

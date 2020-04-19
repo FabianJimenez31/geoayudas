@@ -15,12 +15,14 @@ const {Header, Footer,Content} = Layout;
 
 const CMk4Up = (refe,item,waitTime,setCarouselMk4,carouselMk4) => {
     setCarouselMk4(IndexWrap(item,(carouselMk4-1)));
+    if(carouselMk4 >= Math.ceil(item.length/SlidesToShow(item))-1){setCarouselMk4(0)}    
     refe.current.slick.slickPause();
     setTimeout(()=>{refe.current.slick.slickPlay();},waitTime);
     refe.current.slick.slickPrev();
 }
 const CMk4Down = (refe,item,waitTime,setCarouselMk4,carouselMk4) => {
     setCarouselMk4(IndexWrap(item,(carouselMk4+1)));
+    if(carouselMk4 >= Math.ceil(item.length/SlidesToShow(item))-1){setCarouselMk4(0)}    
     refe.current.slick.slickPause();
     setTimeout(()=>{refe.current.slick.slickPlay();},waitTime);
     refe.current.slick.slickNext();
@@ -47,8 +49,8 @@ const ContentCarousel = ({
     setInitiative,
     mainCity,
     mainDepartamento,
-    resetMainDepartamento,
-    resetMainCity
+    // resetMainDepartamento,
+    // resetMainCity
 }) => {
     let carouselWide = useRef(0);
     //state
@@ -63,7 +65,7 @@ const ContentCarousel = ({
             setTab(mainDepartamento);
             setDepartamento(mainDepartamento);
             setTab2(null);
-            resetMainDepartamento();
+            //resetMainDepartamento();
         }else if(tabs && !mainDepartamento && !tab){
             setTab(tabs[0].id);
         }
@@ -117,7 +119,7 @@ const ContentCarousel = ({
                         activeKey = {`${tab}`} 
                         className="custom-tab" 
                         onChange={(el)=>{
-                            if(mainDepartamento){resetMainDepartamento()}
+                            //if(mainDepartamento){resetMainDepartamento()}
                             setTab(el);
                             setTab2(null);
                             setDepartamento(el);
@@ -131,7 +133,7 @@ const ContentCarousel = ({
                                         activeKey={`${tab2}`}
                                         className="custom-tab" 
                                         onChange={(el)=>{
-                                            if(mainCity){resetMainCity()}
+                                            //if(mainCity){resetMainCity()}
                                             setTab2(el);
                                             setCurrentCity(el);
                                             setCarouselMk4(0);
@@ -153,15 +155,18 @@ const ContentCarousel = ({
                 </Row>
                 <Row>
                 {
-                    //parseInt(currentcity)  === el2.id ? 
+                    
                     <Col className='carousel_custom'>
                     <div >
                             <Carousel 
                             className='carousel_view_extended' 
                             ref={carouselWide} 
                             autoplay
-                            slidesToShow={1}//{initiatives? SlidesToShow(initiatives):1}
-                            afterChange={(el)=>setCarouselMk4(el)} 
+                            slidesToShow={1}
+                            afterChange={()=>{
+                                setCarouselMk4(carouselMk4+1)
+                                if(carouselMk4 >= Math.ceil(initiatives.length/SlidesToShow(initiatives))-1){setCarouselMk4(0)} 
+                            }}   
                             >
                                 
                                 {
@@ -174,8 +179,8 @@ const ContentCarousel = ({
                                                 return (
                                                 <Card key={`${id}_card_carousel_${i2}`} className='init_card'>
                                                 <img className='card_initiative_img' alt={`img_holder_${i}`} src={`./assets/jpg/Thumbnail_${Math.floor(Math.random() * (6 - 1 + 1) + 1)}.png`}/>
-                                                <p className='card_title'>{el2.direccion}</p>
-                                                <p className='card_desc'>{el2.url}</p>
+                                                <p className='card_title'>{el2.nombre}</p>
+                                                <p className='card_desc'>{el2.descripcion}</p>
                                                 <DefButton title={`Contactar`} classes={`wide`} action={()=>setInitiative(el2.id)}/>
                                                 </Card>
                                                 )

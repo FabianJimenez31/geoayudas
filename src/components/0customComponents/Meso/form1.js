@@ -38,14 +38,14 @@ const  Form1 = ({departamentos, ciudades, setDepartamento, setCity})=>{
                                 </Select>
                             </Form.Item>
                             <Form.Item >
-                            <a href={`#${routes[3].name}`}>
+                            <a href={`/#${routes[3].name}`}>
                             <DefButton title={`donar`} classes={`wide`} />
                             </a>
                             </Form.Item>
                         </Form>
                     </Col>
                 </Card>
-                    <p className="help"> ¿ Necesitas Ayuda ? <a className='purple' href="#">Click Aqui</a> </p>
+                    <p className="help"> ¿ Necesitas Ayuda ? <a className='purple' href="/#">Click Aqui</a> </p>
             </Fragment>
 }
 

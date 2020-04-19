@@ -1,0 +1,169 @@
+.staff_card{
+    margin:0 20px;
+    &>.img_holder{
+        position: relative;
+        height: 60vh;
+        width: 70%;
+        background-size: cover;
+        transform: translateY(150px);
+        z-index: 1;
+        &>.staff_number{
+            position: absolute;
+            right: -120px;
+            top:0;
+            color: @ga-blue;
+            font-family: 'CusFont4';
+            font-size: 18px;
+            letter-spacing: 5px; 
+        }
+    }
+    &>.botones_desc{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        justify-content: right;
+        align-items: flex-start;
+        &>.description{
+            width: 50%;
+            display: inline-flex;
+            flex-direction: column;
+            padding: 30px;
+            position: relative;
+            height: 260px;
+            margin: none;
+            background-color: @ga-blue;
+            border-radius: 10px 10px 0 0;
+            z-index: 2;
+            color:@ga-white;
+            .linkedinLogo{
+                height: 40px;
+                width: 40px;
+             }
+             &>.name{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 40px;
+                margin-bottom: 0px;
+                font-family: 'CusFont1';
+                text-transform: uppercase;
+             }
+             &>.cargo{
+                 font-size: 18px;
+                 margin-bottom: 20px;
+                font-family: 'CusFont4';
+                text-transform: capitalize;
+                color: @ga-white-t;
+            }
+            &>.descripcion{
+                width: 85%;
+                font-size: 16px;
+                font-family: 'CusFont3';
+                color: @ga-white-t;
+            }
+        }
+        .staff_controller_holder{
+            display: inline-flex;
+         }
+        .staff_controller{
+            position: relative;
+            z-index: 0;
+            height: 112px;
+            color: @ga-white;
+            background-color: @ga-purple;
+            font-family: 'CusFont5';
+            border-color: @ga-purple;
+            border-radius: 0px;
+        }
+    }
+
+}
+
+
+@media(max-width:500px){
+    .staff_card{
+        margin:0 10px;
+        &>.img_holder{
+            position: relative;
+            height: 50vh;
+            width: 100%;
+            background-size: cover;
+            transform: translateY(50px);
+            z-index: 1;
+            &>.staff_number{
+                position: absolute;
+                right: -120px;
+                top:0;
+                color: @ga-blue;
+                font-family: 'CusFont4';
+                font-size: 18px;
+                letter-spacing: 5px;
+                
+            }
+        }
+        &>.botones_desc{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            align-items: flex-start;
+            &>.description{
+                padding: 30px;
+                width: 100%;
+                display: inline-flex;
+                flex-direction: column;
+                padding: 30px;
+                position: relative;
+                height: auto;
+                margin: none;
+                background-color: @ga-blue;
+                border-radius: 10px 10px 0 0;
+                z-index: 2;
+                color:@ga-white;
+              
+                .linkedinLogo{
+                    height: 40px;
+                    width: 40px;
+                 }
+                 &>.name{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    font-size: 40px;
+                    margin-bottom: 0px;
+                    font-family: 'CusFont1';
+                    text-transform: uppercase;
+                 }
+                 &>.cargo{
+                     font-size: 18px;
+                     margin-bottom: 20px;
+                    font-family: 'CusFont4';
+                    text-transform: capitalize;
+                    color: @ga-white-t;
+                }
+                &>.descripcion{
+                    width: 85%;
+                    font-size: 16px;
+                    font-family: 'CusFont3';
+                    color: @ga-white-t;
+                }
+            }
+            .staff_controller_holder{
+                display: inline-flex;
+                width: 100%;
+             }
+            .staff_controller{
+                position: relative;
+                z-index: 5;
+                height: 60px;
+                width: 50%;
+                color: @ga-white;
+                background-color: @ga-purple;
+                font-family: 'CusFont5';
+                border-color: @ga-purple;
+                border-radius: 0px;
+            }
+        }
+    
+    }
+}

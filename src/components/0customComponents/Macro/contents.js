@@ -35,17 +35,16 @@ class Contents extends React.Component{
         }
     }
     CheckInitiatives = async (id_city) =>{
-       
         const data = await ServerData(`/iniciativas/${id_city}/`);
         if(data){
             this.setState(()=>({initiatives:data}));
         }
     };
     setDepartamento = (data)=>{
-        this.setState(()=>({departamento:data, cities:null}))
+        this.setState(()=>({departamento:data, cities:null, city: null, initiatives:null}))
     }
     setCity = (data) =>{
-        this.setState(()=>({city:data}))
+        this.setState(()=>({city:data,initiatives:null}))
     }
     setInitiatives = (data) => {
         this.setState(()=>({initiatives:data}))
@@ -75,6 +74,14 @@ class Contents extends React.Component{
         if(city && !initiatives){
             this.CheckInitiatives(city);
         }
+        if(this.props.departamento){
+            this.props.resetMainDepartamento();
+            this.setDepartamento(this.props.departamento);
+        }
+        if(this.props.city){
+            this.props.resetMainCity();
+            this.setCity(this.props.city);
+        }
     }
 
 
@@ -92,8 +99,8 @@ class Contents extends React.Component{
                 id,
                 name,
                 waitTime,
-                resetMainDepartamento,
-                reseMainCity
+                // resetMainDepartamento,
+                // reseMainCity
                 } = this.props;
         const {
                 setInitiative,
@@ -128,8 +135,8 @@ class Contents extends React.Component{
             setInitiative={setInitiative}
             mainDepartamento={this.props.departamento}
             mainCity = {this.props.city}
-            reseMainCity={reseMainCity}
-            resetMainDepartamento={resetMainDepartamento}
+            // reseMainCity={reseMainCity}
+            // resetMainDepartamento={resetMainDepartamento}
             />
         </div>);
     }
