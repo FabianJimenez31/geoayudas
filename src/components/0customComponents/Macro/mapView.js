@@ -39,10 +39,15 @@ class MapView extends React.Component{
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition((position)=>state.setState({viewportmap:{width:'100%',
             height:'100%',latitude:position.coords.latitude,longitude:position.coords.longitude,zoom:10},localZone:{width:'100%',
-            height:'100%',latitude:position.coords.latitude,longitude:position.coords.longitude,zoom:13}}));
+            height:'100%',latitude:position.coords.latitude,longitude:position.coords.longitude,zoom:13}}),((res)=>{
+                if(res.code ===1){
+                    state.setState({localZone:state.state.viewportmap});
+                }
+            }));
     }
     }
     GoToLocalZone(context,location){
+        console.log(location);
         context.setState(()=>({viewportmap:location}));
     }
     FilterByName(context,text){
