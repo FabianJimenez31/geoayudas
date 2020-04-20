@@ -11,7 +11,7 @@ import MapCarousel from '../Micro/maps/mapCarousel';
 // Function 
 import {ServerData} from '../commonFunctions';
 // Holder to map 
-const locations = require('../sharedContents/locations.json');
+// const locations = require('../sharedContents/locations.json');
 
 
 class MapView extends React.Component{
@@ -60,7 +60,7 @@ class MapView extends React.Component{
         context.setState(()=>({viewportmap:location}));
     }
     FilterByName(context,text){
-        context.setState(()=>({initiativesFilter:context.state.initiatives.filter((el)=>el.nombre.includes(text))}));
+        context.setState(()=>({initiativesFilter:context.state.initiatives.filter((el)=>el.nombre.toLowerCase().includes(text))}));
        // console.log(text);
        
     }

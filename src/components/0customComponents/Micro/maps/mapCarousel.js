@@ -53,7 +53,7 @@ return(<div className='map_carousel'>
         <Button className="controller" onClick={()=>{CarouselUp(carouselRef,waitTime)}}><LeftOutlined /></Button>
         <Button className="controller" onClick={()=>{CarouselDown(carouselRef,waitTime)}}><RightOutlined /></Button>
     </div>
-    <Carousel autoplay ref={carouselRef} dots={false} slidesToShow={4}>
+    <Carousel autoplay ref={carouselRef} dots={false} slidesToShow={elements && elements.length < 4 ? elements.length : 4}>
     {elements && elements.map((el,i)=>{
         return(
             <CarouselCard element={el} key={`carousel_map_${i}`}/>
