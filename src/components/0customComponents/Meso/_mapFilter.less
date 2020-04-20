@@ -1,0 +1,84 @@
+.map_filter_holder{
+    margin: 15px;
+    position: absolute;
+    width: 400px;
+    height: auto;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    &>.row{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        &>.filter_button{
+            background-color: @ga-white;
+            color: @ga-blue;
+            font-family: 'CusFont1';
+            width: 190px;
+            height: 100px;
+            border: 1px solid rgba(128, 128, 128, 0.274);
+            cursor: pointer;
+            white-space: normal;
+        }
+        &>.filter_button:hover,
+        &>.filter_button::selection,
+        &>.filter_button.selected{
+            background-color: @ga-blue;
+            color: @ga-white;
+        }
+
+    }
+    &>.searchbar{
+        margin-bottom: 15px;
+    }
+}
+@media(max-width:500px){
+    .map_filter_holder{
+        margin: 15px;
+        position: absolute;
+        width: 400px;
+        height: auto;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        &>.row{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 15px;
+            &>.filter_button{
+                &.no_mobile{
+                    display: none;
+                }
+                background-color: @ga-blue;
+                color: @ga-white;
+                font-family: 'CusFont1';
+                font-size: 16px;
+                width: 190px;
+                height: 30px;
+                border: 1px solid rgba(128, 128, 128, 0.274);
+                cursor: pointer;
+                white-space: normal;
+            }
+            &>.filter_button:hover,
+            &>.filter_button::selection,
+            &>.filter_button.selected{
+                background-color: @ga-blue;
+                color: @ga-white;
+            }
+    
+        }
+        &>.searchbar{
+            width: 80%;
+            margin-bottom: 15px;
+        }
+    }
+}
+

@@ -1,0 +1,125 @@
+
+.map_carousel{
+    position: absolute;
+    z-index: 10;
+    bottom: 20px;
+    right: 20px;
+    width: 60%;
+    background-color: rgba(245, 245, 245, 0.3);
+    &>.row_controller{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        float: right;
+        right: 0;
+        color: red;
+        &>.controller{
+            height: 50px;
+            transform: translateY(-50px);
+            border: none;
+            border-radius: 0px;
+            background-color:@ga-white;
+            color:  @ga-blue;
+        }
+        &>.controller:hover,
+        &>.controller::selection{
+            background-color: @ga-blue;
+            color: @ga-white;
+        }
+    }
+}
+.map_car_holder{
+    margin:10px;
+    padding: 8px;
+    width: 180px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    .row{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        &>.tipo{
+            color:@gray;
+            font-family: 'CusFont3';
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+        &>.tipo_circle{
+            &.op1{
+               background-color: @orange; 
+            }
+            &.op2{
+                background-color:  @ga-blue; 
+             }
+            margin-left: 10px;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+
+    }
+    .title{
+        color:@ga-blue;
+            font-family: 'CusFont2';
+            font-size: 14px;
+            text-transform: capitalize;
+            height: 50px;
+            text-align: center;
+    }
+    .sector{
+        color:@gray;
+            font-family: 'CusFont3';
+            font-size: 12px;
+            text-transform: capitalize;
+        &>span{
+            font-weight: bold;
+        }
+    }
+    .ubicacion{
+        color:@gray;
+            font-family: 'CusFont3';
+            font-size: 12px;
+            text-transform: capitalize;
+        &>span{
+            font-weight: bold;
+        }
+    }
+    .fase{
+        color:@gray;
+            font-family: 'CusFont3';
+            font-size: 12px;
+            text-transform: capitalize;
+        &>span{
+            font-weight: bold;
+        }
+    }
+    .apoyo{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        color:@gray;
+            font-family: 'CusFont3';
+            font-size: 12px;
+            text-transform: capitalize;
+        &>span{
+            font-weight: bold;
+        }
+        .emoticon{
+            background-color: yellow;
+            margin-left: 10px;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+        }
+    }
+    p{
+        margin-bottom: 3px;
+    }
+}
+
+@media(max-width:500px){
+    .map_carousel{
+        display: none;
+    }
+}
