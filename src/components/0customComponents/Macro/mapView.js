@@ -8,6 +8,8 @@ import ReactMapGL,{Marker, Popup} from 'react-map-gl';
 import PopUpCard from '../Micro/maps/popupcard';
 import MapFilter from '../Meso/mapFilter';
 import MapCarousel from '../Micro/maps/mapCarousel';
+// Function 
+import {ServerData} from '../commonFunctions';
 // Holder to map 
 const locations = require('../sharedContents/locations.json');
 
@@ -34,6 +36,13 @@ class MapView extends React.Component{
         
     }
     
+    CheckIniciativas = async () =>{
+        let data = await ServerData(`/iniciativas/`);
+        if(data){
+            this.setState(()=>({initiatives:data}))
+        }
+    }
+
     // Get User Location
     GetLocation(state){
         if (navigator.geolocation) {
@@ -66,7 +75,8 @@ class MapView extends React.Component{
         this.GetLocation(this);   
     // TODO Ask server for Initiatives (All) ///////////////////////////////////////////////////////////////
     // set Initiatives to state 
-        this.setState(()=>({initiatives:locations}))
+        this.CheckIniciativas();
+        //this.setState(()=>({initiatives:locations}))
         
     }
     
