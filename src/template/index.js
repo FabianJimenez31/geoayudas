@@ -21,7 +21,7 @@ class Template extends Component {
             {this.props.children}
           </div>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>©2020 Created by GeoAyudas</Footer>
+        <Footer className={'footer'}>©2020 Created by GeoAyudas</Footer>
       </Layout>
     );
   }

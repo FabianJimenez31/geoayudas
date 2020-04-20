@@ -1,0 +1,53 @@
+.marker-round{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.out_big{
+    &.op2{
+        background-color: @ga-purple;
+    }
+    &.op1{
+        background-color: @orange;
+    }
+    opacity: 30%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+}
+.out_med{
+    &.op2{
+        background-color: @ga-purple;
+    }
+    &.op1{
+        background-color: @orange;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 50%;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 11;
+}
+.circle_mark{
+    &.op2{
+        background-color: @ga-blue;
+    }
+    &.op1{
+        background-color: @orange;
+    }
+    
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    z-index: 12;
+}

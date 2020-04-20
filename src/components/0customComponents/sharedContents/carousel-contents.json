@@ -1,0 +1,35 @@
+[
+    {
+        "id":"01",
+        "text1":"poblacion vulnerable",
+        "text2":"ayuda a los mas necesitados",
+        "text3":"Con tu ayuda garantizaremos llegar a muchas %STRONG% familias colombianas %STRONG% para enfrantar la crisis sanitaria del %STRONG% COVID-19. %STRONG%",
+        "buttonlabel":"conocer mas",
+        "buttonicon":"/assets/clicklogo.png",
+        "buttonlink":"/",
+        "image":"assets/jpg/Layer_1579_1.png",
+        "imagealt":"kids"
+    },
+    {
+        "id":"02",
+        "text1":"iniciativas y emprendimientos",
+        "text2":"todos luchamos contra el covid-19",
+        "text3":"Ayuda estas %STRONG% iniciativas %STRONG% a continuar con sus proyectos que quieren %STRONG% cambiar %STRONG% el rumbo de esta contingencia a favor de los mas %STRONG% necesitados %STRONG%",
+        "buttonlabel":"apoyar",
+        "buttonicon":"/assets/clicklogo.png",
+        "buttonlink":"/",
+        "image":"assets/jpg/Layer_1579.png",
+        "imagealt":"meeting"
+    },
+    {
+        "id":"03",
+        "text1":"instituciones y fundaciones",
+        "text2":"generando una gran ayuda",
+        "text3":"Ayudando a estas %STRONG% fundaciones %STRONG% generas un gran cambio en todas las %STRONG% familias %STRONG% y poblacion que esta siendo %STRONG% afectada %STRONG% por esta contingencia",
+        "buttonlabel":"conocer mas",
+        "buttonicon":"/assets/clicklogo.png",
+        "buttonlink":"/",
+        "image":"assets/jpg/Layer_1579_2.png",
+        "imagealt":"hands"
+    }
+]

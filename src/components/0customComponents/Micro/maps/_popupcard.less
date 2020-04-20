@@ -1,0 +1,41 @@
+.popup_holder{
+    margin:10px;
+    width: 220px;
+    height: auto;
+    .row{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        &>.tipo{
+            color:grey;
+            font-family: 'CusFont3';
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        &>.tipo_circle{
+            &.op1{
+               background-color: @orange; 
+            }
+            &.op2{
+                background-color:  @ga-blue; 
+             }
+            margin-left: 10px;
+            border-radius: 50%;
+            width: 13px;
+            height: 13px;
+        }
+
+    }
+    .title{
+        color:@ga-blue;
+            font-family: 'CusFont2';
+            font-size: 18px;
+            text-transform: capitalize;
+    }
+    .sector{
+        color:@ga-blue;
+            font-family: 'CusFont3';
+            font-size: 14px;
+            text-transform: capitalize;
+    }
+}

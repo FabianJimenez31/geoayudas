@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, Menu,Row,Col } from 'antd';
-import { Link } from 'react-router-dom';
+const routes = require('../components/0customComponents/sharedContents/id_routes.json'); 
+// import { Link } from 'react-router-dom';
 
 
 const { Header } = Layout;
@@ -29,11 +30,11 @@ export const HeaderComponent = () =>(
         </Col>
         <Col xs={24} lg={18} >
           <Menu mode="horizontal" className={`header-menu`} defaultSelectedKeys={['home']}>
-            <Menu.Item key="home"><Link to={`/`}>INICIO</Link></Menu.Item>
-            <Menu.Item key="mision"><Link to={`/mision`}>NUESTRA MOTIVACION</Link></Menu.Item>
-            <Menu.Item key="donate"><Link to={`/donate`}>DONDE PUEDO DONAR</Link></Menu.Item>
-            <Menu.Item key="staff"><Link to={`/staff`}>NUESTRO EQUIPO</Link></Menu.Item>
-            <Menu.Item key="contact"><Link to={`/contact`}>CONTACTANOS</Link></Menu.Item>
+            <Menu.Item key="home"><a href={`#/${routes[0].name}`}>INICIO</a></Menu.Item>
+            <Menu.Item key="mision"><a href={`/#${routes[1].name}`}>NUESTRA MOTIVACION</a></Menu.Item>
+            <Menu.Item key="donate"><a href={`/#${routes[3].name}`}>DONDE PUEDO DONAR</a></Menu.Item>
+            <Menu.Item key="staff"><a href={`/#${routes[5].name}`}>NUESTRO EQUIPO</a></Menu.Item>
+            <Menu.Item key="contact"><a href={`/#`}>CONTACTANOS</a></Menu.Item>
           </Menu>
         </Col>
       </Row>
