@@ -10,10 +10,10 @@ import DetailInitiative from '../0customComponents/Meso/detailCard';
 import { Modal } from 'antd';
 
 // Functions 
-import { ResizeBackGroundImages,ClassifyInitiatives} from '../0customComponents/commonFunctions';
+import { ResizeBackGroundImages,ClassifyInitiatives, ServerData} from '../0customComponents/commonFunctions';
 
 // Routes 
-const initiatives_holder = require('../0customComponents/sharedContents/locations.json');
+//const initiatives_holder = require('../0customComponents/sharedContents/locations.json');
 const routes = require('../0customComponents/sharedContents/id_routes.json');
 
 class  Home extends React.Component {
@@ -51,28 +51,33 @@ class  Home extends React.Component {
     resetMainDepartamento = () =>{
         this.setState(()=>({departamento:null,city:null}))
     }
-    
-     componentDidMount (){
-        ResizeBackGroundImages();
-        // TODO ASK FOR INICIATIVES //////////////////////////////////////////////
-
-        // SET INICIATIVES
-        setTimeout(()=>{
-            this.setState(()=>({allIniciatives:initiatives_holder}));
-            this.setState(()=>({organizedAllIniciatives:ClassifyInitiatives(initiatives_holder)}));
+    CheckIniciativas = async () =>{
+        let data = await ServerData(`/iniciativas/`);
+        // },1000);
+        if(data){    
+           // SET INICIATIVES
+        // setTimeout(()=>{
+            this.setState(()=>({allIniciatives:data}));
+            this.setState(()=>({organizedAllIniciatives:ClassifyInitiatives(data)}));
             // Divide donations from other 
             // donaciones => 3 - ayudas economicas
-            let donaciones = initiatives_holder.filter((el)=> {
+            let donaciones = data.filter((el)=> {
                 return el.sector.id === 3;
             });
             this.setState(()=>({donaciones:ClassifyInitiatives(donaciones)}));
             // otras => !3 - fundaciones y/o emprendimientos 
-            let otras = initiatives_holder.filter((el)=> {
+            let otras = data.filter((el)=> {
                 return el.sector.id !== 3;
             });
             this.setState(()=>({otras:ClassifyInitiatives(otras)}));
-
-        },1000);
+        }
+    }
+    
+     componentDidMount (){
+        ResizeBackGroundImages();
+        // TODO ASK FOR INICIATIVES //////////////////////////////////////////////
+        this.CheckIniciativas();
+        
         
         window.addEventListener('resize',function(){ResizeBackGroundImages();});
         window.addEventListener('orientationchange',function(){ResizeBackGroundImages();});

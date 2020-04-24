@@ -2221,5 +2221,83 @@
                 "nombre": "Caldas"
             }
         }
+    },
+    {
+        "id": 59,
+        "nombre": "Iniciativa civil de apoyo a Indigenas- Usme y Rafael Uribe",
+        "descripcion": "Apoyo a población indígena en Bogotá",
+        "poblacion_estimada": 297,
+        "direccion": "Usme, Rafael Uribe, Bogota",
+        "url": "https://www.instagram.com/memiliahenao/",
+        "latitud": 4.542104,
+        "longitud": -74.11396,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 2,
+            "nombre": "Medio"
+        },
+        "tipo": {
+            "id": 3,
+            "nombre": "Entidades Solidarias"
+        },
+        "entidad": {
+            "id": 63,
+            "nombre": "Iniciativa Civil Bogota",
+            "direccion": "Usme, Rafael Uribe, Bogota"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 495,
+            "nombre": "Bogotá",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 60,
+        "nombre": "Red Matamba y Guasá-ASAM",
+        "descripcion": "Organización de base que provee de alimentación a personas afectadas por el aislamiento obligatorio en Timbiquí, Cauca.",
+        "poblacion_estimada": 200,
+        "direccion": "Timbiquí, Cauca",
+        "url": "https://www.facebook.com/mirnarosa.herreravente?fref=search&__tn__=%2Cd%2CP-R&eid=ARCbZNTEkSqlZX09NDgts3gA2rLkSuSO_jEGmHObtttOi13xY-LpuDLKZZo0DKJXPSm4FTRaPEgs00Ru",
+        "latitud": 2.773436,
+        "longitud": -77.666168,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 2,
+            "nombre": "Medio"
+        },
+        "tipo": {
+            "id": 3,
+            "nombre": "Entidades Solidarias"
+        },
+        "entidad": {
+            "id": 64,
+            "nombre": "Matamba y Guasá- ASAM",
+            "direccion": "Timbiquí, Cauca"
+        },
+        "sector": {
+            "id": 4,
+            "nombre": "Ayuda Mercados"
+        },
+        "ciudad": {
+            "id": 428,
+            "nombre": "Timbiquí",
+            "departamento": {
+                "id": 9,
+                "nombre": "Cauca"
+            }
+        }
     }
 ]

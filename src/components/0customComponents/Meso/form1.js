@@ -6,6 +6,7 @@ import DefButton from '../Micro/defaultButton';
 const { Option } = Select;
 // Routes
 const routes = require('../sharedContents/id_routes.json');
+const enlaces = require('../sharedContents/_enlaces.json');
 
 const  Form1 = ({departamentos, ciudades, setDepartamento, setCity})=>{
 
@@ -57,7 +58,7 @@ const  Form1 = ({departamentos, ciudades, setDepartamento, setCity})=>{
                         </Form>
                     </Col>
                 </Card>
-                    <p className="help">¿Necesitas Ayuda? <a className='purple' href="/#">Clic Aquí</a> </p>
+                    <p className="help">¿Necesitas Ayuda? <a className='purple' href={`${enlaces.ayuda_clickaqui}`}>Clic Aquí</a> </p>
             </Fragment>
 }
 

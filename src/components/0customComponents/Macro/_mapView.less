@@ -1,3 +1,5 @@
+
+
 .map_header{
     display: flex;
     flex-direction: row;
@@ -32,12 +34,21 @@
     z-index: 5;
 }
 
+@media(max-width:800px){
+    .map-title{
+        margin-right: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-size: 40px;
+    }
+}
 
-@media(max-width:500px){
+@media(max-width:600px){
 
     .map_header{
         &>.map_title_element{
             width: 100%;
+            height: auto;
         }
     }
 
@@ -48,10 +59,6 @@
     margin-top: 20px;
     font-size: 40px;
 }
-.paperplane{
-    width: 70vw;
-    position: static;
-    bottom: 0;
-}
+
 
 }

@@ -80,6 +80,8 @@ class MapView extends React.Component{
     componentDidMount(){
         this.GetLocation(this);
     }
+
+    
     
     render(){
         const {setInitiative} = this.props;
@@ -97,7 +99,7 @@ class MapView extends React.Component{
                         </p>
                     </div>
                 </div>
-            <div className='map_holder'>
+            <div className='map_holder' >
                 <MapFilter 
                 search={(text)=>{this.FilterByName(this,text)}}
                 btn1={()=>{this.GoToLocalZone(this,this.state.localZone)}}
@@ -107,10 +109,19 @@ class MapView extends React.Component{
                 clear={()=>{this.ClearFilterType(this)}}
                 />
                 <ReactMapGL
-                className='mapgl'
+                minZoom={5}
+                // maxBounds={[[1.639182,-69.954683],[6.105884,-81.352887]]}
+                mapStyle='mapbox://styles/mapbox/light-v10'
                 mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_KEY}
+                // width='100%'
+                // height='100%'
+                // latitude='4.598185'
+                // longitude='-74.075962'
+                // zoom='5'
                 {...this.state.viewportmap}
-                onViewportChange={(viewport)=>this.setState({viewportmap:viewport})}
+                onViewportChange={(viewport)=>this.setState(()=>({
+                    viewportmap:viewport
+                }))}
                 >
                     {toMap && toMap.map((location,id)=>{
                         return <Marker key={`location_${id}`} latitude={location.latitud} longitude={location.longitud}>

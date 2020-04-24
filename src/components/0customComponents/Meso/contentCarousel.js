@@ -178,7 +178,8 @@ const ContentCarousel = ({
                                             {el.map((el2,i2)=>{
                                                 return (
                                                 <Card key={`${id}_card_carousel_${i2}`} className='init_card'>
-                                                <img className='card_initiative_img' alt={`img_holder_${i}`} src={`./assets/jpg/Thumbnail_${Math.floor(Math.random() * (6 - 1 + 1) + 1)}.png`}/>
+                                                <img className='card_initiative_img' alt={`img_holder_${i}`} src={
+                                                    el2.link_image ? el2.link_image : `./assets/jpg/Thumbnail_${Math.floor(Math.random() * (6 - 1 + 1) + 1)}.png`}/>
                                                 <p className='card_title'>{el2.nombre}</p>
                                                 <p className='card_desc'>{el2.descripcion}</p>
                                                 <DefButton title={`Contactar`} classes={`wide`} action={()=>setInitiative(el2)}/>

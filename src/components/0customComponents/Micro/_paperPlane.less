@@ -1,5 +1,21 @@
 .paper_plane{
     position: absolute;
     bottom: 0;
-    width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    height: inherit;
+}
+@media(max-width:1200px){
+    .paper_plane{
+        position: absolute;
+        bottom: 0;
+        width: 45%;
+    }
+}
+@media(max-width:600px){
+    .paper_plane{
+        position: static;
+        width: 90%;
+    }
 }
