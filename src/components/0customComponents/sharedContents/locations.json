@@ -156,6 +156,84 @@
         }
     },
     {
+        "id": 5,
+        "nombre": "Sharon Barrera Hundelhausen",
+        "descripcion": "Ama de casa\r\nCC. 1013658837\r\nTel. 3506498207\r\n1 menor de edad y 1 mayor de 60 años",
+        "poblacion_estimada": 6,
+        "direccion": "Cra 21b # 29a - 89",
+        "url": "sharyhundelshauseen@hotmail.com",
+        "latitud": 10.416059,
+        "longitud": -75.532115,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 11,
+            "nombre": "Sharon Barrera Hundelhausen",
+            "direccion": "Cra 21b # 29a - 89"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 167,
+            "nombre": "Cartagena de Indias",
+            "departamento": {
+                "id": 4,
+                "nombre": "Bolívar"
+            }
+        }
+    },
+    {
+        "id": 6,
+        "nombre": "Luz Patricia Ramírez Correa",
+        "descripcion": "Trabajo en Apto y Ventas\r\nCC. 32543652\r\nTel. 3172690622\r\nUn menor con discapacidad y 1 persona mayor de 60 años",
+        "poblacion_estimada": 2,
+        "direccion": "Carrera 90#65c10 Torre 2 apto 2113",
+        "url": "ramirezpatricia8388@gmail.com",
+        "latitud": 6.279394,
+        "longitud": -75.598094,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 12,
+            "nombre": "Luz Patricia Ramírez Correa",
+            "direccion": "Carrera 90#65c10 Torre 2 apto 2113"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 73,
+            "nombre": "Medellín",
+            "departamento": {
+                "id": 1,
+                "nombre": "Amazonas"
+            }
+        }
+    },
+    {
         "id": 7,
         "nombre": "Maríannys del Valle Sánchez Pérez",
         "descripcion": "Ama de Casa - Extranjera\r\nCédula Extranjería. 22607442\r\nTel. 3227877906\r\n3 menores de edad",
@@ -195,6 +273,45 @@
         }
     },
     {
+        "id": 8,
+        "nombre": "Santos Tiziano Peña Pacheco",
+        "descripcion": "Independiente\r\nCC. 79210139\r\nTel. 3156824970",
+        "poblacion_estimada": 3,
+        "direccion": "cra 3 # 13-03",
+        "url": "sainpt2011@gmail.com",
+        "latitud": 4.579134,
+        "longitud": -74.216833,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 14,
+            "nombre": "Santos Tiziano Peña Pacheco",
+            "direccion": "cra 3 n 13-03"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 573,
+            "nombre": "Soacha",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
         "id": 9,
         "nombre": "Jean Carlos Cuauro Cuauro",
         "descripcion": "Obrero\r\nCédula Extranjera. 22607436\r\nTel. 3227877906\r\n3 menores de edad",
@@ -212,7 +329,7 @@
             "nombre": "Alto"
         },
         "tipo": {
-            "id": 3,
+            "id": 2,
             "nombre": "Poblacion Vulnerable"
         },
         "entidad": {
@@ -251,7 +368,7 @@
             "nombre": "Alto"
         },
         "tipo": {
-            "id": 3,
+            "id": 2,
             "nombre": "Poblacion Vulnerable"
         },
         "entidad": {
@@ -351,6 +468,162 @@
         }
     },
     {
+        "id": 13,
+        "nombre": "Yesit Banquez Lopez",
+        "descripcion": "Independiente\r\nCC. 80778777\r\nTel. 3137110882\r\n2 menores de edad",
+        "poblacion_estimada": 4,
+        "direccion": "Calle 8 #15-03",
+        "url": "banquezyesit@gmail.com",
+        "latitud": 11.374655,
+        "longitud": -72.24124,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 19,
+            "nombre": "Yesit Banquez lopez",
+            "direccion": "Calle 8 #15-03"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 684,
+            "nombre": "Maicao",
+            "departamento": {
+                "id": 17,
+                "nombre": "La Guajira"
+            }
+        }
+    },
+    {
+        "id": 14,
+        "nombre": "Luis Joaquin Carval lambraño",
+        "descripcion": "Comerciante\r\nCC. 73195222\r\nTel. 3146500796\r\n4 menores de edad",
+        "poblacion_estimada": 6,
+        "direccion": "Calle 15 #5-17",
+        "url": "luisjuaquincarvallambrano@gmail.com",
+        "latitud": 11.381211,
+        "longitud": -72.233474,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 20,
+            "nombre": "Luis Joaquin Carval Lambraño",
+            "direccion": "Calle 15 #5-17"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 684,
+            "nombre": "Maicao",
+            "departamento": {
+                "id": 17,
+                "nombre": "La Guajira"
+            }
+        }
+    },
+    {
+        "id": 15,
+        "nombre": "Heyder Duran",
+        "descripcion": "Trabajador Informal\r\nCC. 7602201\r\nTel. 3012487090\r\n3 menores de edad y 1 mayor de 60 años",
+        "poblacion_estimada": 6,
+        "direccion": "Calle 15 #33-27",
+        "url": "heyder78@hotmail.com",
+        "latitud": 11.376928,
+        "longitud": -72.260417,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 21,
+            "nombre": "Heyder Duran",
+            "direccion": "Calle 15 #33-27"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 684,
+            "nombre": "Maicao",
+            "departamento": {
+                "id": 17,
+                "nombre": "La Guajira"
+            }
+        }
+    },
+    {
+        "id": 16,
+        "nombre": "Jose Alejandro Riaño henao",
+        "descripcion": "Desempleado\r\nCC. 1000099786\r\nTel. 3194065530",
+        "poblacion_estimada": 2,
+        "direccion": "Calle61 # 74a122",
+        "url": "ateneaderecho75@gmail.com",
+        "latitud": 6.266455,
+        "longitud": -75.587501,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 22,
+            "nombre": "Jose Alejandro Riaño Henao",
+            "direccion": "Calle61 # 74a122"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 73,
+            "nombre": "Medellín",
+            "departamento": {
+                "id": 1,
+                "nombre": "Amazonas"
+            }
+        }
+    },
+    {
         "id": 17,
         "nombre": "Julipier Yireth Fuenmayor Castillo",
         "descripcion": "Desempleada \r\nPasaporte. 143792974\r\nTel. 3046650876",
@@ -386,6 +659,45 @@
             "departamento": {
                 "id": 12,
                 "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 18,
+        "nombre": "Ginna Paola Romero Morales",
+        "descripcion": "Desempleada\r\nCC. 1140817451\r\nTel. 3013710754\r\n2 menores de edad y 1 mayor de 60 años",
+        "poblacion_estimada": 7,
+        "direccion": "Carrera 25 #14-124",
+        "url": "rubimoon5@yahoo.com",
+        "latitud": 3.443606,
+        "longitud": -76.536767,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 24,
+            "nombre": "Ginna Paola Romero Morales",
+            "direccion": "Carrera 25 #14-124"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 140,
+            "nombre": "Juan de Acosta",
+            "departamento": {
+                "id": 3,
+                "nombre": "Atlántico"
             }
         }
     },
@@ -797,7 +1109,7 @@
             "nombre": "Alto"
         },
         "tipo": {
-            "id": 4,
+            "id": 2,
             "nombre": "Poblacion Vulnerable"
         },
         "entidad": {
@@ -914,7 +1226,7 @@
             "nombre": "Alto"
         },
         "tipo": {
-            "id": 5,
+            "id": 2,
             "nombre": "Poblacion Vulnerable"
         },
         "entidad": {
@@ -1031,7 +1343,7 @@
             "nombre": "Alto"
         },
         "tipo": {
-            "id": 6,
+            "id": 2,
             "nombre": "Poblacion Vulnerable"
         },
         "entidad": {
@@ -1170,6 +1482,357 @@
         }
     },
     {
+        "id": 40,
+        "nombre": "Katiuska del Valle Pérez Arismendi",
+        "descripcion": "Comerciante\r\nCédula Extranjera. 11960533\r\nTel. 3133917650\r\n3 menores de edad",
+        "poblacion_estimada": 5,
+        "direccion": "Carrera 18 G # 10-64",
+        "url": "lagata_bellla@hotmail.com",
+        "latitud": 4.588469,
+        "longitud": -74.223288,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 45,
+            "nombre": "Katiuska del Valle Pérez Arismendi",
+            "direccion": "Carrera 18 G # 10-64"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 573,
+            "nombre": "Soacha",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 41,
+        "nombre": "Katiuska del Valle Pérez Arismendi",
+        "descripcion": "Comerciante\r\nCédula Extranjera. 11960533\r\nTel. 3133917650\r\n3 menores de edad",
+        "poblacion_estimada": 5,
+        "direccion": "Carrera 18 G # 10-64",
+        "url": "lagata_bellla@hotmail.com",
+        "latitud": 4.588469,
+        "longitud": -74.223288,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 45,
+            "nombre": "Katiuska del Valle Pérez Arismendi",
+            "direccion": "Carrera 18 G # 10-64"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 573,
+            "nombre": "Soacha",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 42,
+        "nombre": "Melissa Carolain Fernández Pérez",
+        "descripcion": "Vendedora Ambulante\r\nCédula Extranjera. 16636614\r\nTel. 3155221569\r\n1 menor de edad",
+        "poblacion_estimada": 3,
+        "direccion": "Carrera 5ta calle 4- 96",
+        "url": "perezcarolain293@gmail.com",
+        "latitud": 4.153721,
+        "longitud": -74.87985,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 46,
+            "nombre": "Melissa Carolain Fernández Pérez",
+            "direccion": "Carrera 5ta con calle 5ta 4- 96"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 1106,
+            "nombre": "Espinal",
+            "departamento": {
+                "id": 28,
+                "nombre": "Tolima"
+            }
+        }
+    },
+    {
+        "id": 43,
+        "nombre": "Richard Suárez",
+        "descripcion": "Comerciante Informal\r\nPasaporte. 144153558\r\nTel. 3045338618\r\n3 menores de edad",
+        "poblacion_estimada": 4,
+        "direccion": "Calle 24 #1-120",
+        "url": "richardsuarez20@gmail.com",
+        "latitud": 4.733661,
+        "longitud": -74.244782,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 47,
+            "nombre": "Richard Suárez",
+            "direccion": "Cale 24# 1 -120"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 543,
+            "nombre": "Madrid",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 44,
+        "nombre": "Yeraida Kricel Nogales Ramos",
+        "descripcion": "Desempleada\r\nCédula Extranjera. 22554326\r\nTel. 3125098986\r\n2 menores de edad",
+        "poblacion_estimada": 4,
+        "direccion": "Carrera 4-20 villas de alcala",
+        "url": "ericlaleyenda@gmail.com",
+        "latitud": 4.736912,
+        "longitud": -74.253668,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 48,
+            "nombre": "Yeraida Kricel Nogales Ramos",
+            "direccion": "Carrera 4-20 villas de alcala"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 543,
+            "nombre": "Madrid",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 45,
+        "nombre": "Massiel Carolina Espinoza Noguera",
+        "descripcion": "Desempleada\r\nCC.1052095870\r\nTel.3058916908\r\n3 menores de edad",
+        "poblacion_estimada": 5,
+        "direccion": "Calle 24 # 1 - 120 torre 1 apto 501",
+        "url": "carinoguera9@gmail.com",
+        "latitud": 4.735759,
+        "longitud": -74.251509,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 49,
+            "nombre": "Massiel Carolina Espinoza Noguera",
+            "direccion": "Calle 24 # 1 - 120 torre 1 apto 501"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 543,
+            "nombre": "Madrid",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 46,
+        "nombre": "Gloria Angela Cutiva Aya",
+        "descripcion": "Ama de Casa\r\nCC.52060430\r\nTel.3162262733",
+        "poblacion_estimada": 4,
+        "direccion": "Diagonal 38c 52_06 E",
+        "url": "angelacutiva15@outlook.com",
+        "latitud": 4.566219,
+        "longitud": -74.181581,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 50,
+            "nombre": "Gloria Angela Cutiva Aya",
+            "direccion": "Diagonal 38c 52_06 E"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 573,
+            "nombre": "Soacha",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 47,
+        "nombre": "Alicia Ramos Rumique",
+        "descripcion": "Ama de Casa\r\nCC. 52122451\r\nTel.3138030512\r\n1 menor de edad",
+        "poblacion_estimada": 4,
+        "direccion": "Carrera 57 numero 48_14 E",
+        "url": "zulycutiva99@gmail.com",
+        "latitud": 4.566219,
+        "longitud": -74.181581,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 51,
+            "nombre": "Alicia Ramos Rumique",
+            "direccion": "Carrera 57 numero 48_14 E"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 573,
+            "nombre": "Soacha",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 48,
+        "nombre": "Martha Lucía Rey Alvarez",
+        "descripcion": "Desempleada\r\nCC. 39655322\r\nTel. 3203071564\r\n3 menores de edad",
+        "poblacion_estimada": 5,
+        "direccion": "Cra 2 B # 11 A 19",
+        "url": "martha-rey@hotmail.com",
+        "latitud": 4.575366,
+        "longitud": -74.217845,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 52,
+            "nombre": "Martha Lucía Rey Alvarez",
+            "direccion": "Cra 2 B # 11 A 19"
+        },
+        "sector": {
+            "id": 3,
+            "nombre": "Ayudas Economica"
+        },
+        "ciudad": {
+            "id": 573,
+            "nombre": "Soacha",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
         "id": 49,
         "nombre": "Wilfredo Gonzalez Moncada",
         "descripcion": "Impresor de Scren (Con empleo)\r\nCédula Extranjera.540669\r\nTel.3002020674\r\n2 menores de edad y 2 mayores de 60 años",
@@ -1283,6 +1946,279 @@
             "departamento": {
                 "id": 12,
                 "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 52,
+        "nombre": "Fundación Fénix-Fénix",
+        "descripcion": "Fundación que apoya a población vulnerable: Adolescentes y adultos consumidores de sustancias psicoactivas.",
+        "poblacion_estimada": 25,
+        "direccion": "Necoclí-antioquia",
+        "url": "https://www.facebook.com/fenix.fenix.125760/about?lst=507157605%3A100026661662309%3A1587357026",
+        "latitud": 8.425688,
+        "longitud": -76.785535,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 3,
+            "nombre": "Bajo"
+        },
+        "tipo": {
+            "id": 3,
+            "nombre": "Entidades Solidarias"
+        },
+        "entidad": {
+            "id": 56,
+            "nombre": "Fundación Fénix Fénix",
+            "direccion": "Caribe-Antioquia"
+        },
+        "sector": {
+            "id": 4,
+            "nombre": "Ayuda Mercados"
+        },
+        "ciudad": {
+            "id": 79,
+            "nombre": "Necoclí",
+            "departamento": {
+                "id": 1,
+                "nombre": "Amazonas"
+            }
+        }
+    },
+    {
+        "id": 53,
+        "nombre": "Iniciativa ciudadana de apoyo en el Rodadero, Santa Marta",
+        "descripcion": "Iniciativa de apoyo a los recicladores del Rodadero, Santa marta",
+        "poblacion_estimada": 140,
+        "direccion": "Santa Marta, Magdalena",
+        "url": "www.breukers.co",
+        "latitud": 11.243309,
+        "longitud": -74.196303,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 2,
+            "nombre": "Medio"
+        },
+        "tipo": {
+            "id": 2,
+            "nombre": "Poblacion Vulnerable"
+        },
+        "entidad": {
+            "id": 57,
+            "nombre": "Linda Breukers",
+            "direccion": "Rodadero-Santa Marta"
+        },
+        "sector": {
+            "id": 4,
+            "nombre": "Ayuda Mercados"
+        },
+        "ciudad": {
+            "id": 717,
+            "nombre": "Santa Marta",
+            "departamento": {
+                "id": 18,
+                "nombre": "Magdalena"
+            }
+        }
+    },
+    {
+        "id": 54,
+        "nombre": "Inicitiva Miguel Gonzalez y Manuela Garcia",
+        "descripcion": "Apoyo con mercados a familias con miembros con discapacidad cognitiva/sensorial/física.",
+        "poblacion_estimada": 100,
+        "direccion": "Itagui, Antioquia",
+        "url": "https://www.instagram.com/miguelgonzale5/",
+        "latitud": 6.169489,
+        "longitud": -75.615347,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 2,
+            "nombre": "Medio"
+        },
+        "tipo": {
+            "id": 3,
+            "nombre": "Entidades Solidarias"
+        },
+        "entidad": {
+            "id": 58,
+            "nombre": "Miguel Gonzalez",
+            "direccion": "Itagui, Antioquia"
+        },
+        "sector": {
+            "id": 4,
+            "nombre": "Ayuda Mercados"
+        },
+        "ciudad": {
+            "id": 62,
+            "nombre": "Itagüí",
+            "departamento": {
+                "id": 1,
+                "nombre": "Amazonas"
+            }
+        }
+    },
+    {
+        "id": 55,
+        "nombre": "Fundación Colectivo Aguapanelitas",
+        "descripcion": "Distribución de mercados solidarios con población vulnerable-habitantes de calle en Ciudad Bolivar",
+        "poblacion_estimada": 500,
+        "direccion": "Cll 64 J No. 72 a 19. Int 3 Of. 103",
+        "url": "https://www.facebook.com/pg/fundacion.colectivoap/about/",
+        "latitud": 4.679598,
+        "longitud": -74.101036,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 2,
+            "nombre": "Medio"
+        },
+        "tipo": {
+            "id": 3,
+            "nombre": "Entidades Solidarias"
+        },
+        "entidad": {
+            "id": 59,
+            "nombre": "Fundación Colectivo Aguapanelitas",
+            "direccion": "Bogotá, Colombia"
+        },
+        "sector": {
+            "id": 4,
+            "nombre": "Ayuda Mercados"
+        },
+        "ciudad": {
+            "id": 495,
+            "nombre": "Bogotá",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 56,
+        "nombre": "JAC La Perseverancia - Comité de Emergencias Barrio La Perseverancia",
+        "descripcion": "Comité de Emergencias Barrio La Perseverancia",
+        "poblacion_estimada": 800,
+        "direccion": "Barrio la Perseverancia",
+        "url": "https://www.facebook.com/comitedeemergencia.barriolaperseverancia.7/timeline?lst=507157605%3A100048911508590%3A1587397668",
+        "latitud": 4.617867,
+        "longitud": -74.064271,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 2,
+            "nombre": "Medio"
+        },
+        "tipo": {
+            "id": 3,
+            "nombre": "Entidades Solidarias"
+        },
+        "entidad": {
+            "id": 60,
+            "nombre": "JAC La Perseverancia",
+            "direccion": "Barrio la Perseverancia"
+        },
+        "sector": {
+            "id": 4,
+            "nombre": "Ayuda Mercados"
+        },
+        "ciudad": {
+            "id": 495,
+            "nombre": "Bogotá",
+            "departamento": {
+                "id": 12,
+                "nombre": "Cundinamarca"
+            }
+        }
+    },
+    {
+        "id": 57,
+        "nombre": "Iglesia Centro Cristiano",
+        "descripcion": "Comunidad Religiosa que apoya a migrantes",
+        "poblacion_estimada": 2000,
+        "direccion": "Barrio Los Pinos, Cucuta",
+        "url": "https://www.centrocristiano.com.co",
+        "latitud": 7.903255,
+        "longitud": -72.493554,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 1,
+            "nombre": "Alto"
+        },
+        "tipo": {
+            "id": 3,
+            "nombre": "Entidades Solidarias"
+        },
+        "entidad": {
+            "id": 61,
+            "nombre": "IGLESIA CENTRO CRISTIANO",
+            "direccion": "Barrio Los Pinos, Cucuta"
+        },
+        "sector": {
+            "id": 4,
+            "nombre": "Ayuda Mercados"
+        },
+        "ciudad": {
+            "id": 824,
+            "nombre": "Cúcuta",
+            "departamento": {
+                "id": 21,
+                "nombre": "Norte de Santander"
+            }
+        }
+    },
+    {
+        "id": 58,
+        "nombre": "El Transformador ONG",
+        "descripcion": "apoyo a familias vulnerables en Manizales",
+        "poblacion_estimada": 400,
+        "direccion": "Manizales, Caldas",
+        "url": "https://www.instagram.com/eltransfo/",
+        "latitud": 5.061256,
+        "longitud": -75.504676,
+        "fase": {
+            "id": 1,
+            "nombre": "Fase Inicial"
+        },
+        "nivel_apoyo": {
+            "id": 2,
+            "nombre": "Medio"
+        },
+        "tipo": {
+            "id": 3,
+            "nombre": "Entidades Solidarias"
+        },
+        "entidad": {
+            "id": 62,
+            "nombre": "El Transformador ONG",
+            "direccion": "Manizales, Caldas"
+        },
+        "sector": {
+            "id": 4,
+            "nombre": "Ayuda Mercados"
+        },
+        "ciudad": {
+            "id": 336,
+            "nombre": "Manizales",
+            "departamento": {
+                "id": 6,
+                "nombre": "Caldas"
             }
         }
     }

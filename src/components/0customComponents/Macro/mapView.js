@@ -9,7 +9,7 @@ import PopUpCard from '../Micro/maps/popupcard';
 import MapFilter from '../Meso/mapFilter';
 import MapCarousel from '../Micro/maps/mapCarousel';
 // Function 
-import {ServerData} from '../commonFunctions';
+//import {ServerData} from '../commonFunctions';
 // Holder to map 
 // const locations = require('../sharedContents/locations.json');
 
@@ -36,12 +36,12 @@ class MapView extends React.Component{
         
     }
     
-    CheckIniciativas = async () =>{
-        let data = await ServerData(`/iniciativas/`);
-        if(data){
-            this.setState(()=>({initiatives:data}))
-        }
-    }
+    // CheckIniciativas = async () =>{
+    //     let data = await ServerData(`/iniciativas/`);
+    //     if(data){    
+    //         this.setState(()=>({initiatives:data}))
+    //     }
+    // }
 
     // Get User Location
     GetLocation(state){
@@ -56,39 +56,35 @@ class MapView extends React.Component{
     }
     }
     GoToLocalZone(context,location){
-        console.log(location);
         context.setState(()=>({viewportmap:location}));
     }
     FilterByName(context,text){
-        context.setState(()=>({initiativesFilter:context.state.initiatives.filter((el)=>el.nombre.toLowerCase().includes(text))}));
+
+        if(this.props.allIniciatives){
+            context.setState(()=>({initiativesFilter:this.props.allIniciatives.filter((el)=>el.nombre.toLowerCase().includes(text))}));
+            //context.setState(()=>({initiativesFilter:context.state.initiatives.filter((el)=>el.nombre.toLowerCase().includes(text))}));
+        }
        // console.log(text);
        
     }
     FilterByType(context,type){
-        context.setState(()=>({initiativesFilter:context.state.initiatives.filter((el)=>el.tipo.id === type)}));
+        if(this.props.allIniciatives){
+            context.setState(()=>({initiativesFilter:this.props.allIniciatives.filter((el)=>el.tipo.id === type)}));
+            //context.setState(()=>({initiativesFilter:context.state.initiatives.filter((el)=>el.tipo.id === type)}));
+        }
     }
     ClearFilterType(context){
         context.setState(()=>({initiativesFilter:null}));
     }
 
     componentDidMount(){
-        this.GetLocation(this);   
-    // TODO Ask server for Initiatives (All) ///////////////////////////////////////////////////////////////
-    // set Initiatives to state 
-        this.CheckIniciativas();
-        //this.setState(()=>({initiatives:locations}))
-        
+        this.GetLocation(this);
     }
-    
-    componentDidUpdate(){
-        //console.log(this.state.currentinitiative);
-    }
-    
     
     render(){
-        const {initiatives,initiativesFilter, currentinitiative} = this.state;
-        const toMap = initiativesFilter? initiativesFilter: initiatives;
-        
+        const {setInitiative} = this.props;
+        const {initiativesFilter, currentinitiative} = this.state;
+        const toMap = initiativesFilter? initiativesFilter: this.props.allIniciatives;
         return<div id='mapview'>
             <div className='map_header'>
                 
@@ -111,6 +107,7 @@ class MapView extends React.Component{
                 clear={()=>{this.ClearFilterType(this)}}
                 />
                 <ReactMapGL
+                className='mapgl'
                 mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_KEY}
                 {...this.state.viewportmap}
                 onViewportChange={(viewport)=>this.setState({viewportmap:viewport})}
@@ -118,16 +115,21 @@ class MapView extends React.Component{
                     {toMap && toMap.map((location,id)=>{
                         return <Marker key={`location_${id}`} latitude={location.latitud} longitude={location.longitud}>
                                     <MarkerLocation 
-                                    classes={location.tipo.id === 2 ? 'op1': 'op2'}
+                                    classes={location.tipo.id !== 3 ? 'op1': 'op2'}
                                     action={()=>{this.setState(()=>({currentinitiative:location}))}}
                                     />
                                 </Marker>
                     })}
-                    {currentinitiative && <Popup latitude={currentinitiative.latitud} longitude={currentinitiative.longitud} onClose={()=>{this.setState(()=>({currentinitiative:null}))}}>
-                        <PopUpCard element={currentinitiative}/>
+                    {currentinitiative && 
+                    <Popup latitude={currentinitiative.latitud} longitude={currentinitiative.longitud} 
+                    onClose={()=>{this.setState(()=>({currentinitiative:null}))}}
+                    closeOnClick={false}
+                    >
+                        <PopUpCard element={currentinitiative} setInitiative={setInitiative}/>
                         </Popup>}
                 </ReactMapGL>
-                <MapCarousel elements={initiativesFilter ? initiativesFilter : initiatives}/>
+                <MapCarousel elements={toMap} setInitiative={setInitiative}/>
+                {/* initiativesFilter ? initiativesFilter : initiatives}/> */}
             </div>
         </div>;
     }

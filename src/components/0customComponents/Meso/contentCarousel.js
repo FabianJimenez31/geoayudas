@@ -165,7 +165,7 @@ const ContentCarousel = ({
                             slidesToShow={1}
                             afterChange={()=>{
                                 setCarouselMk4(carouselMk4+1)
-                                if(carouselMk4 >= Math.ceil(initiatives.length/SlidesToShow(initiatives))-1){setCarouselMk4(0)} 
+                                if(initiatives && carouselMk4 >= Math.ceil(initiatives.length/SlidesToShow(initiatives))-1){setCarouselMk4(0)} 
                             }}   
                             >
                                 
@@ -181,7 +181,7 @@ const ContentCarousel = ({
                                                 <img className='card_initiative_img' alt={`img_holder_${i}`} src={`./assets/jpg/Thumbnail_${Math.floor(Math.random() * (6 - 1 + 1) + 1)}.png`}/>
                                                 <p className='card_title'>{el2.nombre}</p>
                                                 <p className='card_desc'>{el2.descripcion}</p>
-                                                <DefButton title={`Contactar`} classes={`wide`} action={()=>setInitiative(el2.id)}/>
+                                                <DefButton title={`Contactar`} classes={`wide`} action={()=>setInitiative(el2)}/>
                                                 </Card>
                                                 )
                                             })}

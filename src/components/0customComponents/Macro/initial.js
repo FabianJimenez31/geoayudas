@@ -6,7 +6,7 @@ import CarouselCard from '../Meso/carouselCard';
 import ControllerCarousel from '../Meso/carouselController';
 import Form1 from '../Meso/form1';
 // Function
-import {IndexWrap, ServerData} from '../commonFunctions';
+import {IndexWrap/*, ServerData*/} from '../commonFunctions';
 // Info Imported
 const slides = require('../sharedContents/carousel-contents.json');
 
@@ -23,31 +23,31 @@ class Initial extends React.Component{
         }
     }
     // State Functions
-    async CheckDepartamentos(){
-        let data = await ServerData(`/departamentos`);
-        if(data){
-            this.setState(()=>({departamentos:data, cities:null}));
-        }
-    }
+    // async CheckDepartamentos(){
+    //     let data = await ServerData(`/departamentos`);
+    //     if(data){
+    //         this.setState(()=>({departamentos:data, cities:null}));
+    //     }
+    // }
 
-    async CheckCities(id_departamento){
-        const data = await ServerData(`/ciudades/${id_departamento}`);
-        if(data){
-            this.setState(()=>({cities:data}));
-        }
-    }
+    // async CheckCities(id_departamento){
+    //     const data = await ServerData(`/ciudades/${id_departamento}`);
+    //     if(data){
+    //         this.setState(()=>({cities:data}));
+    //     }
+    // }
 
-    componentDidMount(){
-        this.CheckDepartamentos();
-    }
+    // componentDidMount(){
+    //     this.CheckDepartamentos();
+    // }
 
-    componentDidUpdate(){
-        let {departamento, cities} = this.state;
-        // Check on State Changes 
-        if(departamento && !cities){
-           this.CheckCities(departamento);
-       }
-    }
+    // componentDidUpdate(){
+    //     let {departamento, cities} = this.state;
+    //     // Check on State Changes 
+    //     if(departamento && !cities){
+    //        this.CheckCities(departamento);
+    //    }
+    // }
     SetCarouselID = (params) =>{
         this.setState({carouselID:params})
     }
@@ -59,7 +59,7 @@ class Initial extends React.Component{
         this.setState(()=>({city:params}));
         this.props.setCity(params);
     }
-
+    
 
     render(){
     // Variables and References
@@ -67,8 +67,8 @@ class Initial extends React.Component{
     const carouselRefBack = React.createRef();
     const {
             carouselID,
-            departamentos,
-            cities
+            // departamentos,
+            // cities
             } = this.state;
     const {
         waitTime,
@@ -79,7 +79,25 @@ class Initial extends React.Component{
             SetCity
             } = this;
 
-    
+    let departamentos = null;
+    let cities=null;
+    if(this.props.organizedInitiatives){
+        //departamentos =[];
+        departamentos= Object.entries(this.props.organizedInitiatives).map((el,i)=>{
+           return {nombre:el[0],id:el[1].id}
+        }) ;
+    }
+    if(this.state.departamento && this.props.organizedInitiatives){
+        // console.log('estado: ',this.state.departamento);
+        // console.log('entry: ', Object.entries(this.props.organizedInitiatives));
+        cities = Object.entries(this.props.organizedInitiatives).filter((el)=>el[1].id === this.state.departamento);
+        cities = Object.entries(cities[0][1].ciudades).map((el,i)=>{
+            return {
+                nombre:el[0],
+                id: el[1].id
+            }
+        }); 
+    }
 
     // 
     const CarouselSlideUpdate = (el)=>{
@@ -143,7 +161,7 @@ class Initial extends React.Component{
                 <ControllerCarousel currentSlide={slides[carouselID].id} up={CarouselSlideUp} down={CarouselSlideDown} actionTabs={SelectedSlide} slides={slides}/>
                 </Col>
                 <Col  offset={2} xs={20} lg={6} >
-                   <Form1 departamentos={departamentos} ciudades={cities} setDepartamento={SetDepartamento} setCity={SetCity}/>
+                   <Form1 departamentos={departamentos} ciudades={cities} setDepartamento={SetDepartamento} setCity={SetCity} />
                 </Col>
             </Row>
         </div>);

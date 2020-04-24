@@ -74,3 +74,34 @@ export const SlidesToShow = (numberofslides) =>{
         return 1;
     }
 }
+
+
+// Clasify Iniciatives by departamento and city 
+export const ClassifyInitiatives = (initiatives_holder)=>{
+    let iniciativasFiltradas={};
+    if(initiatives_holder){
+        initiatives_holder.forEach((el,i)=>{
+            // if no departamento create it
+            if(!iniciativasFiltradas[el.ciudad.departamento.nombre]){
+                iniciativasFiltradas[el.ciudad.departamento.nombre] = {id:el.ciudad.departamento.id};
+            }
+            // if no city create it
+            if(!iniciativasFiltradas[el.ciudad.departamento.nombre].ciudades){
+                iniciativasFiltradas[el.ciudad.departamento.nombre].ciudades={};
+            }
+            if(!iniciativasFiltradas[el.ciudad.departamento.nombre].ciudades[el.ciudad.nombre.trim(/"/g,'')]){
+                iniciativasFiltradas[el.ciudad.departamento.nombre].ciudades[el.ciudad.nombre.trim(/"/g,'')]={id:el.ciudad.id,iniciativas:[]};
+            }
+            //iniciativasFiltradas[el.ciudad.departamento.nombre].ciudades[el.ciudad.nombre.trim(/\"/g,'')]:{id:el.ciudad.id,iniciativas:[]}
+            // add iniciativa to the array
+            // check number of iniciatives
+                // console.log(el);
+                iniciativasFiltradas[el.ciudad.departamento.nombre].ciudades[el.ciudad.nombre.trim(/"/g,'')].iniciativas.push(el);
+                
+    
+        });
+        //console.log('Inciativas Filtradas: ',iniciativasFiltradas);
+    }
+    return iniciativasFiltradas;
+
+}

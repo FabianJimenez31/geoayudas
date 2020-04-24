@@ -21,7 +21,9 @@ const CarouselCard = ({content}) => {
                 </p>
             </Col>
             <Col span={24}>
-                <DefButton title={content.buttonlabel} classes={`carousel`} icon={content.buttonicon}/>
+                <a href={`${content.buttonlink}`}>
+                    <DefButton title={content.buttonlabel} classes={`carousel`} icon={content.buttonicon}/>
+                </a>
             </Col>
     </Fragment>;
 }

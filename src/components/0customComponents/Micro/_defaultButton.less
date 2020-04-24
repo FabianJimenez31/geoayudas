@@ -1,0 +1,49 @@
+.button-icon{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: -12px;
+    bottom: -3px;
+}
+
+.ant-btn{
+    &.custom1{
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        padding: 5px;
+        background-color: @ga-blue;
+        border-color: @ga-blue;
+        border-radius: 10px;
+        color:@ga-white;
+        text-transform: uppercase;
+        font-family: 'CusFont1';
+        font-size: 20px;
+        box-shadow: -5px 10px 0px @ga-lightpurple;
+        position: relative;
+        &.carousel{
+            margin:10px;
+        }
+    }
+    &.custom1.wide{
+        max-width: 100%;
+    }
+    &.custom1:hover,
+    &.custom1::selection,
+    &.custom1::-moz-selection,
+    &.custom1::-webkit-keygen-select,
+    &.custom1:active,
+    &.custom1::before{
+        color:@ga-lightpurple!important;
+        border-color: @ga-blue!important;
+        background-color: @ga-blue;
+        box-shadow: -2px 2px 0px @ga-lightpurple;
+    }
+    &.custom1:focus{
+        color:@ga-lightpurple!important;
+        border-color: @ga-blue!important;
+        background-color: @ga-blue;
+    }
+} 
+
+

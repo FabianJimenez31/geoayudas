@@ -1,11 +1,11 @@
 import React from 'react';
 // Components
-import DetailInitiative from '../Meso/detailCard';
+// import DetailInitiative from '../Meso/detailCard';
 import ContentCarousel from '../Meso/contentCarousel';
 // Function 
-import {ServerData} from '../commonFunctions';
-// Components Ant
-import { Modal } from 'antd';
+//import {ServerData} from '../commonFunctions';
+// // Components Ant
+// import { Modal } from 'antd';
 
 
 class Contents extends React.Component{
@@ -18,29 +18,55 @@ class Contents extends React.Component{
             cities:null,
             city:null,
             initiatives:null,
-            initiative:null
         };
     }
     // State Functions
-    CheckDepartamentos = async () =>{
-        let data = await ServerData(`/departamentos`);
+    CheckDepartamentos = async (inis) =>{
+        //let data = await ServerData(`/departamentos`);
+        let data = Object.entries(inis).map((el,i)=>{
+            return {nombre:el[0],id:el[1].id}
+         }) ;
+        //console.log('CheckDepartamentos: ',data);
         if(data){
             this.setState(()=>({departamentos:data, cities:null}));
         }
     }
-    CheckCities = async (id_departamento)=>{
-        const data = await ServerData(`/ciudades/${id_departamento}`);
+    CheckCities = async (id_departamento, iniciativas)=>{
+        //const data = await ServerData(`/ciudades/${id_departamento}`);
+        
+        let data = Object.entries(iniciativas).filter((el)=>{
+            return el[1].id === parseInt(id_departamento) ;
+        });
+        
+        data = Object.entries(data[0][1].ciudades).map((el,i)=>{
+            return {
+                nombre:el[0],
+                id: el[1].id
+            }
+        });
         if(data){
             this.setState(()=>({cities: data,city:null,initiatives:null,initiative:null}));
         }
     }
-    CheckInitiatives = async (id_city) =>{
-        const data = await ServerData(`/iniciativas/${id_city}/`);
+    CheckInitiatives = async (id_departamento,id_city,iniciativas) =>{
+        //const data = await ServerData(`/iniciativas/${id_city}/`);
+        // console.log('check Initiatives departamento: ',id_departamento);
+        // console.log('check Initiatives ciudad: ',id_city);
+        // console.log('check Initiatives: ',iniciativas);
+        let data=Object.entries(iniciativas).filter((el)=>{
+            return el[1].id === parseInt(id_departamento) ;
+        });
+        data = Object.entries(data[0][1].ciudades).filter((el)=>{
+            return el[1].id === parseInt(id_city) ;
+        });
+        data = data[0][1].iniciativas;
+        //console.log('data init: ', data);
         if(data){
             this.setState(()=>({initiatives:data}));
         }
     };
     setDepartamento = (data)=>{
+        //console.log(data);
         this.setState(()=>({departamento:data, cities:null, city: null, initiatives:null}))
     }
     setCity = (data) =>{
@@ -49,30 +75,34 @@ class Contents extends React.Component{
     setInitiatives = (data) => {
         this.setState(()=>({initiatives:data}))
     }
-    setInitiative = (data) => {
-        this.setState(()=>({initiative:data}))
-    }
+    // setInitiative = (data) => {
+    //     this.setState(()=>({initiative:data}))
+    // }
     
-    componentDidMount(){
-        this.CheckDepartamentos();
-    }
+    // componentDidMount(){
+    //     this.CheckDepartamentos();
+    // }
 
     
     componentDidUpdate(){
+        const {iniciativas} = this.props;
         const {departamento,departamentos, cities, city, initiatives} = this.state;
+        if(iniciativas && !departamentos){
+            this.CheckDepartamentos(iniciativas);
+        }
         if(departamentos && !departamento)
         {
             this.setState(()=>({departamento:departamentos[0].id}));
         }
         if(departamento && !cities)
         {
-            this.CheckCities(departamento);
+            this.CheckCities(departamento,iniciativas);
         }
         if( cities && !city){
             this.setState(()=>({city:cities[0].id}));
         }
         if(city && !initiatives){
-            this.CheckInitiatives(city);
+            this.CheckInitiatives(departamento, city, iniciativas);
         }
         if(this.props.departamento){
             this.props.resetMainDepartamento();
@@ -93,33 +123,35 @@ class Contents extends React.Component{
                 cities,
                 city,
                 initiatives,
-                initiative,
                 } = this.state;
         const {
                 id,
                 name,
                 waitTime,
-                // resetMainDepartamento,
-                // reseMainCity
+                iniciativas,
+                setInitiative
                 } = this.props;
         const {
-                setInitiative,
                 setCity,
                 setDepartamento,
                 } = this;
 
-
+        if(iniciativas){
+            // if(!this.state.departamentos){
+            //     this.CheckDepartamentos(iniciativas);
+            // }
+        }
 
         return(
         <div id={id}>
-            <Modal
+            {/* <Modal
                         visible={initiative?true:false}
                         onCancel={()=>{setInitiative(null)}}
                         footer={null}
                         className="init_modal"
                         >
                              < DetailInitiative initiative={initiative} initiatives={initiatives}/>
-            </Modal>
+            </Modal> */}
             <ContentCarousel
             id={id}
             name={name}

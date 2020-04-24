@@ -3,9 +3,12 @@ import React from 'react';
 import {Row,Col} from 'antd';
 // Component
 import GeoLogo from '../Micro/geoLogo';
-import HeartLogo from '../Micro/heartLogo';
+import HeartIcon from '../Micro/heartIcon';
 import AliadoLogo from '../Micro/aliado';
 import SocialMedia from '../Micro/socialMedia';
+// Textos
+const textos = require('../sharedContents/_textos.json');
+const enlaces = require('../sharedContents/_enlaces.json');
 
 class Motivation extends React.Component{
     constructor(props){
@@ -28,14 +31,14 @@ class Motivation extends React.Component{
                 </Col>
                 <Col xs={{span:24}}  lg={12} className='mot_right'>
                     <div className='mot-text'>
-                    <HeartLogo classes={'heart'}/>
+                    <HeartIcon classes={'heart'}/>
                     <p className='mot-title'>{`NUESTRA \n MOTIVACION`}</p>
-                    <p className='mot-text'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores etum dolor sit amet. Lorem ipsum</p>
+                    <p className='mot-text'>{textos.motivacion}</p>
                     </div>
                     <div className='socialmedia'>
-                    <SocialMedia name={`instagram`}/>
-                    <SocialMedia name={`twitter`}/>
-                    <SocialMedia name={`facebook`}/>
+                            <SocialMedia name={`instagram`} link={`${enlaces.instagram}`}/>
+                            <SocialMedia name={`twitter`} link={`${enlaces.twitter}`}/>   
+                            <SocialMedia name={`facebook`} link={`${enlaces.facebook}`}/>
                     </div>
                     <div className='aliados-block'>
                         <p className='mot-title'>ALIADOS</p>

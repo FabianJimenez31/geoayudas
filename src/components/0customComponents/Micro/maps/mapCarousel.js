@@ -2,18 +2,32 @@ import React from 'react';
 // Ant Components
 import { Carousel,Button } from 'antd';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
+// Components 
+import NivelApoyo from '../nivel_apoyo';
 
 
-function CarouselCard({element}){
-    return (<div className='map_car_holder'>
+
+const SliceName = (nombre)=>{
+    if( nombre.length > 25){
+    return  nombre.slice(0,25)+' ...';
+    }else{
+    return  nombre;
+    }
+}
+
+
+function CarouselCard({element, setInitiative}){
+    return (<div className='map_car_holder' onClick={()=>setInitiative(element)}>
         <div className='row'>
             <p className='tipo'>
-                {element.tipo.nombre}
+                {
+                element.tipo.nombre
+                }
             </p>
             <div className={`tipo_circle ${element.tipo.id === 2 ? 'op1':'op2'}`}></div>
             </div>
             <p className='title'>
-                {element.nombre}
+                {SliceName(element.nombre)}
             </p>
             <p className='sector'>
             <span>Sector:</span>   {element.sector.nombre}
@@ -25,12 +39,12 @@ function CarouselCard({element}){
                <span>Fase:</span> {element.fase.nombre}
             </p>
             <div className='apoyo'>
-               <span>Nivel de apoyo:</span> {element.nivel_apoyo.nombre} <div className='emoticon'></div>
+               <span>Nivel de apoyo:</span> {element.nivel_apoyo.nombre} <NivelApoyo classes='small' id={element.nivel_apoyo.id}/>
             </div>
     </div>);
 }
 
-const MapCarousel = ({elements}) =>{
+const MapCarousel = ({elements, setInitiative}) =>{
 
 const carouselRef= React.useRef();
 const waitTime= 2000;
@@ -56,7 +70,7 @@ return(<div className='map_carousel'>
     <Carousel autoplay ref={carouselRef} dots={false} slidesToShow={elements && elements.length < 4 ? elements.length : 4}>
     {elements && elements.map((el,i)=>{
         return(
-            <CarouselCard element={el} key={`carousel_map_${i}`}/>
+            <CarouselCard element={el} key={`carousel_map_${i}`} setInitiative={setInitiative}/>
         );
     })}
     </Carousel>

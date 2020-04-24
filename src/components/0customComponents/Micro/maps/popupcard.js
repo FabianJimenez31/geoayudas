@@ -2,7 +2,7 @@ import React from 'react';
 // Component 
 import DefButton from '../defaultButton';
 
-const PopUpCard = ({element}) =>{
+const PopUpCard = ({element,setInitiative}) =>{
     return(
         <div className='popup_holder'>
             <div className='row'>
@@ -17,7 +17,7 @@ const PopUpCard = ({element}) =>{
             <p className='sector'>
                 {element.sector.nombre}
             </p>
-            <DefButton title={'CONOCER MAS'}/>
+            <DefButton title={'CONOCER MAS'}  action={()=>setInitiative(element)}/>
         </div>
     );
 }

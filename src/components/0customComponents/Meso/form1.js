@@ -8,6 +8,9 @@ const { Option } = Select;
 const routes = require('../sharedContents/id_routes.json');
 
 const  Form1 = ({departamentos, ciudades, setDepartamento, setCity})=>{
+
+    const [defcity, setDefcity]= React.useState(null);
+
     return <Fragment>
                     <Card className={`form`}>
                     <h2>ENCUENTRA A UNA BUENA CAUSA PARA DONAR</h2>
@@ -19,7 +22,12 @@ const  Form1 = ({departamentos, ciudades, setDepartamento, setCity})=>{
                                 <Select 
                                 className={`form1`}
                                 onChange={(el)=>{
-                                    setDepartamento(el)}}>
+                                    //console.log(el);
+                                    setDepartamento(el);
+                                    setDefcity(null);
+                                }
+                                   
+                                    }>
                                 {
                                     departamentos && departamentos.map((el,i)=><Option key={`departamentos_${i}`} value={el.id}>{el.nombre}</Option>)
                                 }
@@ -30,8 +38,12 @@ const  Form1 = ({departamentos, ciudades, setDepartamento, setCity})=>{
                                 <Select 
                                 className={`form1`}
                                 onChange={(el)=>{
-                                    setCity(el)}}
+                                    setDefcity(el);
+                                    setCity(el);}}
+                                disabled={ciudades ? false:true}
+                                value={defcity}
                                 >
+                                
                                 {
                                     ciudades && ciudades.map((el,i)=><Option key={`ciudades_${i}`} value={el.id}>{el.nombre}</Option>)
                                 }
@@ -45,7 +57,7 @@ const  Form1 = ({departamentos, ciudades, setDepartamento, setCity})=>{
                         </Form>
                     </Col>
                 </Card>
-                    <p className="help"> ¿ Necesitas Ayuda ? <a className='purple' href="/#">Click Aqui</a> </p>
+                    <p className="help">¿Necesitas Ayuda? <a className='purple' href="/#">Clic Aquí</a> </p>
             </Fragment>
 }
 
