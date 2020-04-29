@@ -33,7 +33,7 @@ const MapFilter = ({search,btn1,btn2,btn3,btn4,clear}) =>{
                 clear();
             }
         }}>
-           INICIATIVAS Y EMPRENDIMIENTOS
+           EMPRENDIMIENTOS
         </Button>
         </div>
         <div className='row'>

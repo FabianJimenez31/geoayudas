@@ -10,7 +10,6 @@ import {SlidesToShow, IndexWrap} from '../commonFunctions';
 
 const {TabPane} = Tabs;
 const {Header, Footer,Content} = Layout;
-//
 
 
 const CMk4Up = (refe,item,waitTime,setCarouselMk4,carouselMk4) => {

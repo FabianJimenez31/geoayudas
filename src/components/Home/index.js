@@ -15,6 +15,9 @@ import { ResizeBackGroundImages,ClassifyInitiatives, ServerData} from '../0custo
 // Routes 
 //const initiatives_holder = require('../0customComponents/sharedContents/locations.json');
 const routes = require('../0customComponents/sharedContents/id_routes.json');
+const apisUrls = require(!process.env.NODE_ENV || process.env.NODE_ENV === 'development'?
+                            '../0customComponents/sharedContents/_apiUrls.json':
+                            '../0customComponents/sharedContents/_apiUrlsProduction.json');
 
 class  Home extends React.Component {
 
@@ -52,8 +55,8 @@ class  Home extends React.Component {
         this.setState(()=>({departamento:null,city:null}))
     }
     CheckIniciativas = async () =>{
-        let data = await ServerData(`/iniciativas/`);
-        // },1000);
+
+        let data = await ServerData(apisUrls.iniciativas);
         if(data){    
            // SET INICIATIVES
         // setTimeout(()=>{
@@ -151,7 +154,7 @@ class  Home extends React.Component {
                     resetMainDepartamento={resetMainDepartamento}
                     resetMainCity={resetMainCity}
                     waitTime={waitTime}
-                    name={`INICIATIVAS Y \n EMPRENDIMIENTOS`}
+                    name={`EMPRENDIMIENTOS`}
                     setInitiative={this.setInitiative}
                      />
             </Fragment>

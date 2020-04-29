@@ -1,0 +1,7 @@
+{
+    "iniciativas":{
+        "url":"/api/iniciativas",
+        "ops":{"method":"GET"}
+    }
+    
+}

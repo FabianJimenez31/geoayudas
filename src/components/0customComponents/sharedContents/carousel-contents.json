@@ -6,7 +6,7 @@
         "text3":"Con tu ayuda garantizaremos llegar a muchas %STRONG% familias Colombianas %STRONG% para enfrentar la crisis sanitaria del %STRONG% COVID-19. %STRONG%",
         "buttonlabel":"conocer mas",
         "buttonicon":"assets/icons/click.svg",
-        "buttonlink":"#donate",
+        "buttonlink":"https://vaki.co/vaki/CoronatonColombia",
         "image":"assets/jpg/Layer_1579_1.png",
         "imagealt":"kids"
     },
@@ -17,7 +17,7 @@
         "text3":"Ayuda estas  %STRONG% iniciativas  %STRONG% a continuar con sus proyectos que quieren  %STRONG% cambiar  %STRONG% el rumbo de esta contingencia a favor de los mas  %STRONG% necesitados.  %STRONG%",
         "buttonlabel":"apoyar",
         "buttonicon":"assets/icons/click.svg",
-        "buttonlink":"#initiatives",
+        "buttonlink":"https://vaki.co/vaki/CoronatonColombia",
         "image":"assets/jpg/Layer_1579.png",
         "imagealt":"meeting"
     },
@@ -28,7 +28,7 @@
         "text3":"Ayudando a estas %STRONG% fundaciones %STRONG% generas un gran cambio en todas las %STRONG% familias %STRONG% y población que esta siendo %STRONG% afectada %STRONG% por esta contingencia.",
         "buttonlabel":"conocer mas",
         "buttonicon":"assets/icons/click.svg",
-        "buttonlink":"#initiatives",
+        "buttonlink":"https://vaki.co/vaki/CoronatonColombia",
         "image":"assets/jpg/Layer_1579_2.png",
         "imagealt":"hands"
     }
