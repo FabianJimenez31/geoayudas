@@ -154,12 +154,11 @@ class  Home extends React.Component {
                     name={`INICIATIVAS Y \n EMPRENDIMIENTOS`}
                     setInitiative={this.setInitiative}
                      />
-                <Staff
-                    id={`${routes[5].name}`}
-                />
             </Fragment>
         );
     }
 }
 
 export default Home;
+
+// <Staff id={`${routes[5].name}`}/>
