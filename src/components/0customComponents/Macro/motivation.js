@@ -33,10 +33,10 @@ class Motivation extends React.Component{
                     <div className='mot-text'>
                     <HeartIcon classes={'heart'}/>
                     <p className='mot-title'>{`NUESTRA \n MOTIVACION`}</p>
-                    <p className='mot-text'>{textos.motivacion}</p>
+                    {/* <p className='mot-text'>{textos.motivacion}</p> */}
                     </div>
                     <div className='socialmedia'>
-                            <SocialMedia name={`instagram`} link={`${enlaces.instagram}`}/>
+                            {/* <SocialMedia name={`instagram`} link={`${enlaces.instagram}`}/> */}
                             <SocialMedia name={`twitter`} link={`${enlaces.twitter}`}/>   
                             <SocialMedia name={`facebook`} link={`${enlaces.facebook}`}/>
                     </div>

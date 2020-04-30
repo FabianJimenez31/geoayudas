@@ -34,9 +34,9 @@ export const ResizeBackGroundImages = () =>{
 // Hit an endpoint and set the value if any 
 export const ServerData=async (path)=>{
     try {
-        console.log(path);
+        
         let response = await fetch(path.url,path.ops);
-        console.log(response);
+        
         if (response.status !== 200) {
             throw new Error('bad request');
         }

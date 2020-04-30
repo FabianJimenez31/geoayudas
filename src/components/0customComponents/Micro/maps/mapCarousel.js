@@ -8,7 +8,7 @@ import NivelApoyo from '../nivel_apoyo';
 
 
 const SliceName = (nombre)=>{
-    if( nombre.length > 25){
+    if(nombre != null && nombre.length > 25 ){
     return  nombre.slice(0,25)+' ...';
     }else{
     return  nombre;
