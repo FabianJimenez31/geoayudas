@@ -10,7 +10,7 @@ import DetailInitiative from '../0customComponents/Meso/detailCard';
 import { Modal } from 'antd';
 
 // Functions 
-import { ResizeBackGroundImages,ClassifyInitiatives, ServerData} from '../0customComponents/commonFunctions';
+import { ResizeBackGroundImages,ClassifyInitiatives, ClassifyByPopulation, ServerData} from '../0customComponents/commonFunctions';
 
 // Routes 
 //const initiatives_holder = require('../0customComponents/sharedContents/locations.json');
@@ -67,7 +67,7 @@ class  Home extends React.Component {
             let donaciones = data.filter((el)=> {
                 return el.sector.id === 3;
             });
-            this.setState(()=>({donaciones:ClassifyInitiatives(donaciones)}));
+            this.setState(()=>({donaciones:ClassifyByPopulation(donaciones)}));
             // otras => !3 - fundaciones y/o emprendimientos 
             let otras = data.filter((el)=> {
                 return el.sector.id !== 3;
@@ -157,11 +157,10 @@ class  Home extends React.Component {
                     name={`EMPRENDIMIENTOS`}
                     setInitiative={this.setInitiative}
                      />
+                      {/* <Staff id={`${routes[5].name}`}/> */}
             </Fragment>
         );
     }
 }
 
 export default Home;
-
-// <Staff id={`${routes[5].name}`}/>

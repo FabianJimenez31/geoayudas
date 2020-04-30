@@ -107,3 +107,35 @@ export const ClassifyInitiatives = (initiatives_holder)=>{
     return iniciativasFiltradas;
 
 }
+// Clasify Iniciatives by departamento and poblacion
+export const ClassifyByPopulation = (initiatives_holder)=>{
+    let iniciativasFiltradas={};
+    if(initiatives_holder){
+        initiatives_holder.forEach((el,i)=>{
+            // if no departamento create it
+            if(!iniciativasFiltradas[el.ciudad.departamento.nombre]){
+                iniciativasFiltradas[el.ciudad.departamento.nombre] = {id:el.ciudad.departamento.id};
+            }
+            // if no city create it
+            if(!iniciativasFiltradas[el.ciudad.departamento.nombre].poblacion && el.poblacion){
+                iniciativasFiltradas[el.ciudad.departamento.nombre].poblacion={};
+            }
+            if(el.poblacion && !iniciativasFiltradas[el.ciudad.departamento.nombre].poblacion[el.poblacion.nombre.trim(/"/g,'')] ){
+                iniciativasFiltradas[el.ciudad.departamento.nombre].poblacion[el.poblacion.nombre.trim(/"/g,'')]={id:el.poblacion.id,iniciativas:[]};
+            }
+            if(el.poblacion){
+                iniciativasFiltradas[el.ciudad.departamento.nombre].poblacion[el.poblacion.nombre.trim(/"/g,'')].iniciativas.push(el);
+            }
+                
+    
+        });
+        //console.log('Inciativas Filtradas: ',iniciativasFiltradas);
+    }
+    if(initiatives_holder[0].poblacion){
+
+        return iniciativasFiltradas;
+    }else{
+        return null;
+    }
+
+}
