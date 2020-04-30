@@ -1,6 +1,6 @@
 {
     "iniciativas":{
-        "url":"https://192.99.63.194:8001/api/iniciativas/",
+        "url":"https://geoayudas.humc.co/api/iniciativas/",
         "ops":{"method":"GET"}
     }
     
