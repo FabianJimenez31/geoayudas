@@ -36,7 +36,7 @@ class Motivation extends React.Component{
                     {/* <p className='mot-text'>{textos.motivacion}</p> */}
                     </div>
                     <div className='socialmedia'>
-                            {/* <SocialMedia name={`instagram`} link={`${enlaces.instagram}`}/> */}
+                            <SocialMedia name={`instagram`} link={`${enlaces.instagram}`}/>
                             <SocialMedia name={`twitter`} link={`${enlaces.twitter}`}/>   
                             <SocialMedia name={`facebook`} link={`${enlaces.facebook}`}/>
                     </div>
