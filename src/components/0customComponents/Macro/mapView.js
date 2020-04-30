@@ -29,8 +29,8 @@ class MapView extends React.Component{
             initiatives:null,
             initiativesFilter:null,
             currentinitiative:null,
-            iniciativasEmprendimientosID:3,// ID TO Filters
-            institucionesFundacionesID:1,
+            iniciativasEmprendimientosID:1,// ID TO Filters
+            institucionesFundacionesID:3,
             poblacionVulnerable:2
         }
         
@@ -87,6 +87,7 @@ class MapView extends React.Component{
         const {setInitiative} = this.props;
         const {initiativesFilter, currentinitiative} = this.state;
         const toMap = initiativesFilter? initiativesFilter: this.props.allIniciatives;
+        const toMapCarousel = toMap ? toMap.filter(el => el.tipo.id != 2):null;
         return<div id='mapview'>
             <div className='map_header'>
                 
@@ -141,7 +142,7 @@ class MapView extends React.Component{
                     {toMap && toMap.map((location,id)=>{
                         return <Marker key={`location_${id}`} latitude={location.latitud} longitude={location.longitud}>
                                     <MarkerLocation 
-                                    classes={location.tipo.id !== 3 ? 'op1': 'op2'}
+                                    classes={location.tipo.id === 2 ? 'vulnerable' : location.tipo.id === 3 ? 'entidades': 'emprendimiento'}
                                     action={()=>{this.setState(()=>({currentinitiative:location}))}}
                                     />
                                 </Marker>
@@ -154,7 +155,8 @@ class MapView extends React.Component{
                         <PopUpCard element={currentinitiative} setInitiative={setInitiative}/>
                         </Popup>}
                 </ReactMapGL>
-                <MapCarousel elements={toMap} setInitiative={setInitiative}/>
+                {toMapCarousel && toMapCarousel.length > 1 ?  <MapCarousel elements={toMapCarousel} setInitiative={setInitiative}/>:<div></div>}
+               
                 {/* initiativesFilter ? initiativesFilter : initiatives}/> */}
             </div>
         </div>;
