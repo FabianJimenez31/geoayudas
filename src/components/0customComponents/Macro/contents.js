@@ -23,44 +23,45 @@ class Contents extends React.Component{
     // State Functions
     CheckDepartamentos = async (inis) =>{
         //let data = await ServerData(`/departamentos`);
-        let data = Object.entries(inis).map((el,i)=>{
-            return {nombre:el[0],id:el[1].id}
-         }) ;
-        //console.log('CheckDepartamentos: ',data);
-        if(data){
-            this.setState(()=>({departamentos:data, cities:null}));
-        }
+      if(inis){
+          let data = Object.entries(inis).map((el,i)=>{
+              return {nombre:el[0],id:el[1].id}
+           }) ;
+          //console.log('CheckDepartamentos: ',data);
+          if(data){
+              this.setState(()=>({departamentos:data, cities:null}));
+          }
+      }
+       
     }
     CheckCities = async (id_departamento, iniciativas)=>{
         //const data = await ServerData(`/ciudades/${id_departamento}`);
-        
-        let data = Object.entries(iniciativas).filter((el)=>{
-            return el[1].id === parseInt(id_departamento) ;
-        });
-        
-        data = Object.entries(data[0][1].ciudades).map((el,i)=>{
-            return {
-                nombre:el[0],
-                id: el[1].id
+       
+            let data = Object.entries(iniciativas).filter((el)=>{
+                return el[1].id === parseInt(id_departamento) ;
+            })[0];
+            data= Object.entries(data[1])[1][1];
+            data = Object.entries(data).map((el,i)=>{
+                return {
+                    nombre:el[0],
+                    id: el[1].id
+                }
+            });
+            if(data){
+                this.setState(()=>({cities: data,city:null,initiatives:null,initiative:null}));
             }
-        });
-        if(data){
-            this.setState(()=>({cities: data,city:null,initiatives:null,initiative:null}));
-        }
+        
     }
     CheckInitiatives = async (id_departamento,id_city,iniciativas) =>{
-        //const data = await ServerData(`/iniciativas/${id_city}/`);
-        // console.log('check Initiatives departamento: ',id_departamento);
-        // console.log('check Initiatives ciudad: ',id_city);
-        // console.log('check Initiatives: ',iniciativas);
+       
         let data=Object.entries(iniciativas).filter((el)=>{
             return el[1].id === parseInt(id_departamento) ;
-        });
-        data = Object.entries(data[0][1].ciudades).filter((el)=>{
+        })[0];
+        data= Object.entries(data[1])[1][1];
+        data = Object.entries(data).filter((el)=>{
             return el[1].id === parseInt(id_city) ;
-        });
-        data = data[0][1].iniciativas;
-        //console.log('data init: ', data);
+        })[0];
+        data = data[1].iniciativas;     
         if(data){
             this.setState(()=>({initiatives:data}));
         }

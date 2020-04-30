@@ -90,8 +90,9 @@ class Initial extends React.Component{
     if(this.state.departamento && this.props.organizedInitiatives){
         // console.log('estado: ',this.state.departamento);
         // console.log('entry: ', Object.entries(this.props.organizedInitiatives));
-        cities = Object.entries(this.props.organizedInitiatives).filter((el)=>el[1].id === this.state.departamento);
-        cities = Object.entries(cities[0][1].ciudades).map((el,i)=>{
+        cities = Object.entries(this.props.organizedInitiatives).filter((el)=>el[1].id === this.state.departamento)[0];
+        cities= Object.entries(cities[1])[1][1];
+        cities = Object.entries(cities).map((el,i)=>{
             return {
                 nombre:el[0],
                 id: el[1].id

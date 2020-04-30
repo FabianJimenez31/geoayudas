@@ -119,9 +119,24 @@ class MapView extends React.Component{
                 // longitude='-74.075962'
                 // zoom='5'
                 {...this.state.viewportmap}
-                onViewportChange={(viewport)=>this.setState(()=>({
-                    viewportmap:viewport
-                }))}
+                onViewportChange={(viewport)=>{
+                   
+                    // if(viewport.latitude > 6.105884){
+                    //     viewport.latitude=6.105884;
+                    // }
+                    // if(viewport.latitude < 1.639182){
+                    //     viewport.latitude=1.639182;
+                    // }
+                    // if(viewport.longitude > -81.352887){
+                    //     viewport.longitude=-81.352887;
+                    // }
+                    // if(viewport.longitude < -69.954683){
+                    //     viewport.longitude=-69.954683;
+                    // }
+                    this.setState(()=>({
+                        viewportmap:viewport
+                    }))
+                }}
                 >
                     {toMap && toMap.map((location,id)=>{
                         return <Marker key={`location_${id}`} latitude={location.latitud} longitude={location.longitud}>
