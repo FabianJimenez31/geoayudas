@@ -26,7 +26,9 @@ class Motivation extends React.Component{
                     <div className='mot-img-bck'>
                     <GeoLogo classes='mot_logo'/>
                     <div className='hash-group'>
-                        <div>
+                        <div className='registrate'>
+                        <p>¿ Necesitas Ayuda ?</p>
+                        <p className='sub'>Registrate: </p>
                         <LinkExterno link={enlaces.formulario_entidad_publica} ><BankOutlined /> <span>Entidad Publica</span></LinkExterno>
                         <LinkExterno  link={enlaces.formulario_emprendedor}> <BulbOutlined /> <span>Emprendedor</span></LinkExterno>
                         <LinkExterno  link={enlaces.formulario_vulnerabilidad}><SolutionOutlined /> <span>Población Vulnerable</span></LinkExterno>

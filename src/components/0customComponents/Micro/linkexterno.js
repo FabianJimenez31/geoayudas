@@ -1,5 +1,4 @@
 import React from 'react';
-import { OmitProps } from 'antd/lib/transfer/renderListBody';
 
 
 const LinkExterno = (props) =>{
@@ -7,7 +6,7 @@ const LinkExterno = (props) =>{
         <a href={props.link}>
       {props.children}
         </a>
-        <img src='assets/icons/click.svg'/>
+        <img src='assets/icons/click.svg' alt='click'/>
     </div>;
 }
 
