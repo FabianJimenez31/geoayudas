@@ -87,7 +87,7 @@ class MapView extends React.Component{
         const {setInitiative} = this.props;
         const {initiativesFilter, currentinitiative} = this.state;
         const toMap = initiativesFilter? initiativesFilter: this.props.allIniciatives;
-        const toMapCarousel = toMap ? toMap.filter(el => el.tipo.id != 2):null;
+        const toMapCarousel = toMap ? toMap.filter(el => el.tipo.id !== 2):null;
         return<div id='mapview'>
             <div className='map_header'>
                 

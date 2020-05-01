@@ -4,7 +4,7 @@ import Initial from '../0customComponents/Macro/initial';
 import Motivation from '../0customComponents/Macro/motivation';
 import MapView from '../0customComponents/Macro/mapView';
 import Contents from '../0customComponents/Macro/contents';
-import Staff from '../0customComponents/Macro/staff';
+//import Staff from '../0customComponents/Macro/staff';
 import DetailInitiative from '../0customComponents/Meso/detailCard';
 // Components Ant
 import { Modal } from 'antd';

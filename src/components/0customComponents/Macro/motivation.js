@@ -6,8 +6,11 @@ import GeoLogo from '../Micro/geoLogo';
 import HeartIcon from '../Micro/heartIcon';
 import AliadoLogo from '../Micro/aliado';
 import SocialMedia from '../Micro/socialMedia';
+import LinkExterno from '../Micro/linkexterno';
+// Icons
+import {BulbOutlined,SolutionOutlined,BankOutlined} from '@ant-design/icons';
 // Textos
-const textos = require('../sharedContents/_textos.json');
+//const textos = require('../sharedContents/_textos.json');
 const enlaces = require('../sharedContents/_enlaces.json');
 
 class Motivation extends React.Component{
@@ -23,9 +26,16 @@ class Motivation extends React.Component{
                     <div className='mot-img-bck'>
                     <GeoLogo classes='mot_logo'/>
                     <div className='hash-group'>
+                        <div>
+                        <LinkExterno link={enlaces.formulario_entidad_publica} ><BankOutlined /> <span>Entidad Publica</span></LinkExterno>
+                        <LinkExterno  link={enlaces.formulario_emprendedor}> <BulbOutlined /> <span>Emprendedor</span></LinkExterno>
+                        <LinkExterno  link={enlaces.formulario_vulnerabilidad}><SolutionOutlined /> <span>Persona Vulnerabilidad</span></LinkExterno>
+                        </div>
+                        <div>
                         <p>#JuntosPorLaVida</p>
                         <p>#QuedateEnCasa</p>
                         <p>#EsPorColombia</p>
+                        </div>
                     </div>
                     </div>
                 </Col>

@@ -15,12 +15,16 @@
         margin-left: 0px;        
         }
         &>.hash-group{
-            position: absolute;
-            bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height:90%;
+            // position: absolute;
+            // bottom: 50px;
             width: auto;
             margin-left: 0px;
             text-align: left;
-            &>p{
+            &>div>p{
                 font-family: 'CusFont1';
                 color: @ga-white;
                 font-size: 50px;
@@ -92,7 +96,7 @@
             }
             &>.hash-group{
                 text-align: center;
-                &>p{
+                &>div>p{
                     font-size: 32px;
                    
                 }
@@ -123,17 +127,20 @@
             margin-left: 20px;        
             }
             &>.hash-group{
-                position: absolute;
-                bottom: 20px;
+                // position: absolute;
+                // bottom: 20px;
                 width: auto;
                 margin-left: 0px;
 
                 text-align: left;
-                &>p{
+                &>div>p{
                     font-family: 'CusFont1';
                     color: @ga-white;
                     font-size: 32px;
                     margin-bottom: 10px;
+                }
+                &>div{
+                    margin-bottom: 20px;
                 }
             }
         }
