@@ -29,7 +29,7 @@ class Motivation extends React.Component{
                         <div>
                         <LinkExterno link={enlaces.formulario_entidad_publica} ><BankOutlined /> <span>Entidad Publica</span></LinkExterno>
                         <LinkExterno  link={enlaces.formulario_emprendedor}> <BulbOutlined /> <span>Emprendedor</span></LinkExterno>
-                        <LinkExterno  link={enlaces.formulario_vulnerabilidad}><SolutionOutlined /> <span>Persona Vulnerabilidad</span></LinkExterno>
+                        <LinkExterno  link={enlaces.formulario_vulnerabilidad}><SolutionOutlined /> <span>Población Vulnerable</span></LinkExterno>
                         </div>
                         <div>
                         <p>#JuntosPorLaVida</p>
