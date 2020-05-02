@@ -1,10 +1,14 @@
 @marginTop: 40px;
 @generalpadding:70px;
+
+
+
+
 .mot_left{
     background-color: white;
     background-size: cover;
     
-
+   
     &>.mot-img-bck{
         background-color: @ga-blue-t;
         padding: @generalpadding;
@@ -27,8 +31,26 @@
             &>div>p{
                 font-family: 'CusFont1';
                 color: @ga-white;
-                font-size: 50px;
+                font-size: 40px;
                 margin-bottom: 15px;
+            }
+            .registrate{
+                position: relative;
+               &>.flying{
+                   height: 300px;
+                   position: absolute;
+                   top:0;
+                   left: 0;
+               }
+                padding: 25px;
+                &>p{
+                    font-size: 25px;
+                    text-align: center;
+                   &.sub{
+                    font-size: 20px;
+                    font-family: 'CusFont2';
+                   }
+                }
             }
         }
     }
@@ -133,6 +155,17 @@
                 margin-left: 0px;
 
                 text-align: left;
+
+                &>.registrate{
+                    position: relative;
+                   &>.flying{
+                       height: 270px;
+                       width: 390px;
+                       position: absolute;
+                       top:0;
+                       left: 0;
+                   }
+                }
                 &>div>p{
                     font-family: 'CusFont1';
                     color: @ga-white;

@@ -63,10 +63,33 @@ margin-bottom: 0;
 
 .footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: @ga-blue!important;
     color: @ga-white!important;
     font-family: 'CusFont1';
     min-height: 70px;
+
+    &>.title{
+        font-family: 'CusFont2';
+        color: @ga-white;
+        font-size: 25px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    &>.email,
+    &>.tel{
+        &>a{
+            font-family: 'CusFont3';
+            color: @ga-white;
+            font-size: 18px;
+           
+        }
+    }
+    &>.mark{
+        border-top: 1px solid @ga-white-t;
+        margin-top: 10px;
+        padding: 10px 0 0 0;
+    }
 }
