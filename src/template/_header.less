@@ -93,3 +93,36 @@ margin-bottom: 0;
         padding: 10px 0 0 0;
     }
 }
+
+
+
+
+@media (max-width:500px){
+    .logo-holder{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin-top: 15px;
+        }
+
+        .footer{
+        
+            &>.title{
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            &>.email,
+            &>.tel{
+                &>a{
+                    font-size: 14px;
+                   
+                }
+            }
+            &>.mark{
+                border-top: 1px solid @ga-white-t;
+                margin-top: 10px;
+                padding: 10px 0 0 0;
+                text-align: center;
+            }
+        }
+}

@@ -41,3 +41,43 @@
             text-transform: capitalize;
     }
 }
+@media (max-width:500px){
+    .popup_holder{
+        margin:5px;
+        width: 150px;
+        height: auto;
+        .row{
+            &>.tipo{
+                color:grey;
+                font-family: 'CusFont3';
+                font-size: 10px;
+                text-transform: uppercase;
+            }
+            &>.tipo_circle{
+                &.op1{
+                   background-color: @orange; 
+                }
+                &.op2{
+                    background-color:  @ga-blue; 
+                 }
+                margin-left: 10px;
+                border-radius: 50%;
+                width: 8px;
+                height: 8px;
+            }
+    
+        }
+        .title{
+            color:@ga-blue;
+                font-family: 'CusFont2';
+                font-size: 14px;
+                text-transform: capitalize;
+        }
+        .sector{
+            color:@ga-blue;
+                font-family: 'CusFont3';
+                font-size: 12px;
+                text-transform: capitalize;
+        }
+    }
+}

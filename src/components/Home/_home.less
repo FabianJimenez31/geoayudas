@@ -278,10 +278,11 @@
 
 .card_desc{
     color: rgba(128, 128, 128, 0.8);
-    font-family:'CusFont1';
+    font-family:'CusFont2';
     font-size: 12px;
     text-align: left;
     height: 70px;
+    margin-bottom: 5px;
 }
 
 .carousel_view_extended.slick-slider{
@@ -290,35 +291,7 @@
     }
  
 }
-.ant-modal{
-    &.init_modal{
-        &>.ant-modal-content{
-            border-radius: 15px;
-            &>.ant-modal-body{
-                &>img{
-                    width: 100%;
-                }
-                &>.sector{
-                    font-family:'CusFont1';
-                    color: @ga-lightpurple;
-                    font-size: 12px;
-                }
-                &>.desc{
-                    font-family:'CusFont1';
-                    color: @ga-blue;
-                    font-size: 12px;
-                }
-                &>p{
-                    &>span{
-                        color: gray;
-                        font-family:'CusFont1';
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-    }
-}
+
 .carousel_custom{
     width: 100%;
 }
@@ -427,4 +400,39 @@
         }
     }
     
+}
+@media(max-width:350px){
+    .ant-card{
+        &.init_card{
+            border:none !important;
+            width: auto!important;
+            height: auto!important;
+            display: flex!important;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        
+    }
+    .title_on_white{
+       
+        font-size: 24px;
+        
+    }
+    .ant-tabs-tab{
+        margin-right: 15px!important;
+    }
+    .custom-tab{
+        &>.ant-tabs-bar{
+       
+          
+            margin: 5px;
+            &>div{
+                &>div,div::before{
+                    font-size: 12px;
+                    color: @ga-blue-t!important;
+                }
+            }
+        }
+    }
 }

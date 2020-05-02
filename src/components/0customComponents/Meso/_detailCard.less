@@ -1,4 +1,79 @@
+.ant-modal{
+    &.init_modal{
+        &>.ant-modal-content{
+            border-radius: 15px;
+            &>.ant-modal-body{
+                &>img{
+                    width: 100%;
+                }
+                &>.sector{
+                    font-family:'CusFont1';
+                    color: @ga-lightpurple;
+                    font-size: 12px;
+                }
+                &>.desc{
+                    font-family:'CusFont1';
+                    color: @ga-blue;
+                    font-size: 12px;
+                }
+                &>p{
+                    &>span{
+                        color: gray;
+                        font-family:'CusFont1';
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .modal.card_desc{
     white-space: pre-wrap;
     margin-bottom: 10px;
+}
+
+@media(max-width:500px){
+
+.card_title{
+    font-size: 18px;
+    text-align: center;
+    height: auto;
+}
+
+.card_desc{
+    height: auto;
+    margin-bottom: 5px;
+}
+
+    .ant-modal{
+        &.init_modal{
+            &>.ant-modal-content{
+                border-radius: 10px;
+                &>.ant-modal-body{
+                    &>img{
+                        width: 100%;
+                    }
+                    &>.sector{
+                        font-family:'CusFont1';
+                        color: @ga-lightpurple;
+                        font-size: 12px;
+                    }
+                    &>.desc{
+                        font-family:'CusFont1';
+                        color: @ga-blue;
+                        font-size: 12px;
+                    }
+                    &>p{
+                        &>span{
+                            color: gray;
+                            font-family:'CusFont1';
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
