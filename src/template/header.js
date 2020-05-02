@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout, Menu,Row,Col } from 'antd';
 // Icons
 import GeoLogo from '../components/0customComponents/Micro/geoLogo';
-const enlaces = require('../components/0customComponents/sharedContents/_enlaces.json');
+//const enlaces = require('../components/0customComponents/sharedContents/_enlaces.json');
 const routes = require('../components/0customComponents/sharedContents/id_routes.json'); 
 // import { Link } from 'react-router-dom';
 
@@ -37,7 +37,7 @@ export const HeaderComponent = () =>(
             <Menu.Item key="mision"><a href={`/#${routes[1].name}`}>NUESTRA MOTIVACION</a></Menu.Item>
             <Menu.Item key="donate"><a href={`/#${routes[3].name}`}>DONDE PUEDO DONAR</a></Menu.Item>
             {/* <Menu.Item key="staff"><a href={`/#${routes[5].name}`}>NUESTRO EQUIPO</a></Menu.Item> */}
-            <Menu.Item key="contact"><a href={`${enlaces.header_contactanos}`}>CONTACTANOS</a></Menu.Item>
+            <Menu.Item key="contact"><a href={`/#${routes[6].name}`}>CONTACTANOS</a></Menu.Item>
           </Menu>
         </Col>
       </Row>

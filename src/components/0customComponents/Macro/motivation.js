@@ -27,6 +27,7 @@ class Motivation extends React.Component{
                     <GeoLogo classes='mot_logo'/>
                     <div className='hash-group'>
                         <div className='registrate'>
+                        {/* <img src='/assets/gif/geoayudas_gif.gif' alt='flying_plane' className='flying'/> */}
                         <p>¿ Necesitas Ayuda ?</p>
                         <p className='sub'>Registrate: </p>
                         <LinkExterno link={enlaces.formulario_entidad_publica} ><BankOutlined /> <span>Entidad Publica</span></LinkExterno>
@@ -36,6 +37,7 @@ class Motivation extends React.Component{
                         <div>
                         <p>#JuntosPorLaVida</p>
                         <p>#QuedateEnCasa</p>
+
                         <p>#EsPorColombia</p>
                         </div>
                     </div>
