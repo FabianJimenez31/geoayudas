@@ -65,7 +65,8 @@ class  Home extends React.Component {
             // Divide donations from other 
             // donaciones => 3 - ayudas economicas
             let donaciones = data.filter((el)=> {
-                return el.sector.id === 3;
+                // 5 Doesnt exists so to return all iniciatives, choose every not 5 => all
+                return el.sector.id !== 5;
             });
             this.setState(()=>({donaciones:ClassifyByPopulation(donaciones)}));
             // otras => !3 - fundaciones y/o emprendimientos 
